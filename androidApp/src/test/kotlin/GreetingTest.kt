@@ -1,4 +1,4 @@
-package org.konan.multiplatform
+package com.janaszek.kn
 
 import org.greeting.Greeting
 import org.junit.Assert.assertEquals

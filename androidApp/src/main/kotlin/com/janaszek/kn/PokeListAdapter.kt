@@ -1,4 +1,4 @@
-package org.konan.multiplatform.com.janaszek.kn
+package com.janaszek.kn
 
 import android.view.LayoutInflater
 import android.view.View

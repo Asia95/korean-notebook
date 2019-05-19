@@ -7,7 +7,7 @@ import io.ktor.client.request.get
 import kotlinx.coroutines.*
 import kotlinx.serialization.json.Json
 
-class PokeApi {
+class DatabaseApi {
 
     private val httpClient = HttpClient()
 

@@ -8,13 +8,26 @@
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/grammar_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:text="@string/grammar" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/pokelist_rv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/vocab_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/vocabulary" />
+
+    <Button
+        android:id="@+id/cards_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/flashcards" />
+
+    <Button
+        android:id="@+id/notes_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/notes" />
 </LinearLayout>
