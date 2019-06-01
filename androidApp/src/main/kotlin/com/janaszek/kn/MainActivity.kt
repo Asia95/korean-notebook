@@ -3,6 +3,7 @@ package com.janaszek.kn
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.janaszek.kn.grammar.GrammarCategoryActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -16,7 +17,12 @@ class MainActivity : AppCompatActivity() {
 //        rootLayout.removeAllViews()
 
         grammar_btn.setOnClickListener {
-            val i = Intent(this, GrammarActivity::class.java)
+            val i = Intent(this, GrammarCategoryActivity::class.java)
+            startActivity(i)
+        }
+
+        vocab_btn.setOnClickListener {
+            val i = Intent(this, com.janaszek.kn.vocabulary.VocabularyCategoryActivity::class.java)
             startActivity(i)
         }
 

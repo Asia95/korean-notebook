@@ -1,6 +1,6 @@
 package com.janaszek.kn
 
-import org.greeting.Greeting
+import org.koreanNotebook.Greeting
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.junit.runner.RunWith

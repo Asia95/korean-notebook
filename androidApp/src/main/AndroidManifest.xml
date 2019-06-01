@@ -10,7 +10,12 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GrammarActivity"></activity>
+        <activity android:name=".grammar.GrammarItemActivity" />
+        <activity android:name=".grammar.GrammarRVActivity" />
+        <activity android:name=".grammar.GrammarCategoryActivity" />
+        <activity android:name=".vocabulary.VocabularyItemActivity" />
+        <activity android:name=".vocabulary.VocabularyRVActivity" />
+        <activity android:name=".vocabulary.VocabularyCategoryActivity" />
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme">

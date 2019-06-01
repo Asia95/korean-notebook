@@ -5,7 +5,7 @@ import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import org.greeting.VocabularyWordModel
+import org.koreanNotebook.VocabularyWordModel
 
 class DBOpenHelper(context: Context,
                    factory: SQLiteDatabase.CursorFactory?) :

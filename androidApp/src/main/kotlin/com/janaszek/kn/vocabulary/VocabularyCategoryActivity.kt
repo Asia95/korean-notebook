@@ -1,12 +1,27 @@
-package com.janaszek.kn
+package com.janaszek.kn.vocabulary
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.janaszek.kn.R
+import kotlinx.android.synthetic.main.activity_vocabulary_category.*
 
 class VocabularyCategoryActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_vocabulary_category)
+
+        vocabulary_beginer_btn.setOnClickListener {
+            val i = Intent(this, VocabularyRVActivity::class.java)
+            i.putExtra("category", vocabulary_beginer_btn.text)
+            startActivity(i)
+        }
+
+        vocabulary_intermediate_btn.setOnClickListener {
+            val i = Intent(this, VocabularyRVActivity::class.java)
+            i.putExtra("category", vocabulary_intermediate_btn.text)
+            startActivity(i)
+        }
     }
 }

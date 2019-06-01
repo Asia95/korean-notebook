@@ -1,27 +1,26 @@
-package com.janaszek.kn
+package com.janaszek.kn.grammar
 
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.janaszek.kn.GrammarEntry
+import com.janaszek.kn.R
 import kotlinx.android.synthetic.main.activity_grammar_rv_item.view.*
 
 class GrammarAdapter : RecyclerView.Adapter<GrammarAdapter.ViewHolder>() {
 
     private val grammarList: ArrayList<GrammarEntry> = arrayListOf()
 
-    // Gets the number of animals in the list
     override fun getItemCount(): Int {
         return grammarList.size
     }
 
-    // Inflates the item views
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.activity_grammar_rv_item, parent, false))
     }
 
-    // Binds each animal in the ArrayList to a view
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.grammarTitle?.text = grammarList[position].title
         holder.grammarBody = grammarList[position].body

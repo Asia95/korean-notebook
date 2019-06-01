@@ -5,4 +5,6 @@
     <string name="vocabulary">Vocabulary</string>
     <string name="flashcards">Flashcards</string>
     <string name="notes">Notes</string>
+    <string name="beginer">Beginer</string>
+    <string name="intermediate">Intermediate</string>
 </resources>

@@ -1,7 +1,8 @@
-package com.janaszek.kn
+package com.janaszek.kn.grammar
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.janaszek.kn.R
 import kotlinx.android.synthetic.main.activity_grammar_item.*
 
 class GrammarItemActivity : AppCompatActivity() {

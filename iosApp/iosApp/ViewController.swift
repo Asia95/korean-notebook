@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import greeting
+import koreanNotebook
 
 class ViewController: UIViewController {
 

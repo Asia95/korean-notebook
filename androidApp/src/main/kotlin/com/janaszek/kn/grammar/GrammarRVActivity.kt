@@ -1,17 +1,18 @@
-package com.janaszek.kn
+package com.janaszek.kn.grammar
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
-import kotlinx.android.synthetic.main.activity_grammar.*
+import com.janaszek.kn.R
+import kotlinx.android.synthetic.main.activity_grammar_rv.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
-import org.greeting.DatabaseApi
+import org.koreanNotebook.DatabaseApi
 import kotlin.coroutines.CoroutineContext
 
 class GrammarRVActivity : AppCompatActivity(), CoroutineScope {
@@ -22,7 +23,6 @@ class GrammarRVActivity : AppCompatActivity(), CoroutineScope {
     private lateinit var job: Job
     private lateinit var api: DatabaseApi
     private val adapter = GrammarAdapter()
-    private val grammarList: ArrayList<GrammarEntry> = arrayListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
