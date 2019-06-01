@@ -5,9 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.janaszek.kn.GrammarEntry
 import com.janaszek.kn.R
 import kotlinx.android.synthetic.main.activity_grammar_rv_item.view.*
+import org.koreanNotebook.com.janaszek.kn.GrammarEntry
 
 class GrammarAdapter : RecyclerView.Adapter<GrammarAdapter.ViewHolder>() {
 

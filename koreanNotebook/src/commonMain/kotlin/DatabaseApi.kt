@@ -1,43 +1,21 @@
 package org.koreanNotebook
 
-import com.janaszek.kn.Grammar
-import com.janaszek.kn.GrammarEntry
 import io.ktor.client.HttpClient
 import io.ktor.client.request.get
 import kotlinx.coroutines.*
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonObject
-import org.koreanNotebook.com.janaszek.kn.Database
-import org.koreanNotebook.com.janaszek.kn.GrammarCategory
-import org.koreanNotebook.com.janaszek.kn.VocabularyEntry
+import org.koreanNotebook.com.janaszek.kn.*
 
 class DatabaseApi {
 
     private val httpClient = HttpClient()
     private val databaseURL = "https://api.myjson.com/bins/wdc5k"
 
-    fun getPokemonList(success: (Map<GrammarCategory, GrammarEntry>) -> Unit, failure: (Throwable?) -> Unit) {
-        GlobalScope.launch(ApplicationDispatcher) {
-            try {
-                val firebaseUrl = "https://api.myjson.com/bins/kccyo"
-                val grammar = httpClient.get<String>(firebaseUrl)
-                println("gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg")
-                println(grammar)
-
-                val ge = Json.nonstrict.parse(Grammar.serializer(), grammar).grammar.also(success)
-                println(ge)
-            } catch (ex: Exception) {
-                failure(ex)
-            }
-        }
-    }
-
     fun getGrammarCategories(success: (List<String>) -> Unit, failure: (Throwable?) -> Unit) {
         GlobalScope.launch(ApplicationDispatcher) {
             try {
                 val database = httpClient.get<String>(databaseURL)
-                println("gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg")
-                println(database)
 
                 var grammar = Json.nonstrict.parse(Database.serializer(), database).grammar
 
@@ -58,8 +36,6 @@ class DatabaseApi {
         GlobalScope.launch(ApplicationDispatcher) {
             try {
                 val database = httpClient.get<String>(databaseURL)
-                println("gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg")
-                println(database)
 
                 var grammar = Json.nonstrict.parse(Database.serializer(), database).grammar
 
@@ -85,8 +61,6 @@ class DatabaseApi {
         GlobalScope.launch(ApplicationDispatcher) {
             try {
                 val database = httpClient.get<String>(databaseURL)
-                println("gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg")
-                println(database)
 
                 var vocabulary = Json.nonstrict.parse(Database.serializer(), database).vocabulary
 
