@@ -3,18 +3,16 @@ package com.janaszek.kn
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.janaszek.kn.flashcards.FlashcardsActivity
 import com.janaszek.kn.grammar.GrammarCategoryActivity
+import com.janaszek.kn.vocabulary.VocabularyCategoryActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-//    private var rootLayout: LinearLayout by Delegates.notNull()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-//        rootLayout = findViewById(R.id.root_view) as LinearLayout
-//        rootLayout.removeAllViews()
 
         grammar_btn.setOnClickListener {
             val i = Intent(this, GrammarCategoryActivity::class.java)
@@ -22,7 +20,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         vocab_btn.setOnClickListener {
-            val i = Intent(this, com.janaszek.kn.vocabulary.VocabularyCategoryActivity::class.java)
+            val i = Intent(this, VocabularyCategoryActivity::class.java)
+            startActivity(i)
+        }
+
+        flashcards_btn.setOnClickListener {
+            val i = Intent(this, FlashcardsActivity::class.java)
             startActivity(i)
         }
 

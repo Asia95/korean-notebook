@@ -14,6 +14,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:id="@+id/card_front_text"
         android:text="@string/front"
         android:textColor="@color/white"
         style="@style/Base.TextAppearance.AppCompat.Display1"

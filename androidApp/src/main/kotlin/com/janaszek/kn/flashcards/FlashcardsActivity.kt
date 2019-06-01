@@ -6,6 +6,10 @@ import com.janaszek.kn.R
 import android.animation.AnimatorInflater
 import android.animation.AnimatorSet
 import android.view.View
+import kotlinx.android.synthetic.main.activity_flashcards.*
+import kotlinx.android.synthetic.main.card_back.*
+import kotlinx.android.synthetic.main.card_front.*
+import org.koreanNotebook.com.janaszek.kn.flashcards.FlashcardModel
 
 class FlashcardsActivity : AppCompatActivity() {
 
@@ -19,7 +23,12 @@ class FlashcardsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_flashcards)
+//        var cards = intent.extras.getSerializable("cards") as? FlashcardModel
         findViews()
+
+//        card_front_text.text = cards?.words?.get(0)?.word
+//        card_back_text.text = cards?.words?.get(0)?.description
+
         loadAnimations()
         changeCameraDistance()
     }
@@ -37,8 +46,8 @@ class FlashcardsActivity : AppCompatActivity() {
     }
 
     private fun findViews() {
-        mCardBackLayout = findViewById(R.id.card_back)
-        mCardFrontLayout = findViewById(R.id.card_front)
+        mCardBackLayout = card_back
+        mCardFrontLayout = card_front
     }
 
     fun flipCard(view: View) {
