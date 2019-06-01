@@ -14,24 +14,25 @@ import kotlinx.coroutines.launch
 import org.greeting.DatabaseApi
 import kotlin.coroutines.CoroutineContext
 
-class GrammarActivity : AppCompatActivity(), CoroutineScope {
+class GrammarRVActivity : AppCompatActivity(), CoroutineScope {
 
     override val coroutineContext: CoroutineContext
         get() = job + Dispatchers.Main
 
     private lateinit var job: Job
     private lateinit var api: DatabaseApi
-    private val adapter = PokeListAdapter()
+    private val adapter = GrammarAdapter()
+    private val grammarList: ArrayList<GrammarEntry> = arrayListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_grammar)
+        setContentView(R.layout.activity_grammar_rv)
 
         setupRecyclerView()
         job = Job()
         api = DatabaseApi()
 
-
+        intent.getStringExtra("category")
         loadList()
     }
 
@@ -42,8 +43,8 @@ class GrammarActivity : AppCompatActivity(), CoroutineScope {
     }
 
     private fun loadList(){
-        api.getPokemonList (
-                success = { launch(Dispatchers.Main) { adapter.updateData(it) } },
+        api.getBeginnerGrammar (
+                success = { launch(Dispatchers.Main) { adapter.updateData(it) }},
                 failure = ::handleError
         )
     }
@@ -63,3 +64,4 @@ class GrammarActivity : AppCompatActivity(), CoroutineScope {
         super.onDestroy()
     }
 }
+
