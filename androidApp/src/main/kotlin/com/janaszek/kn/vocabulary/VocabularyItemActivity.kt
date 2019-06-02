@@ -8,6 +8,7 @@ import android.view.MenuItem
 import android.widget.Toast
 import com.google.gson.Gson
 import com.janaszek.kn.R
+import com.janaszek.kn.flashcards.FlashcardWords
 import kotlinx.android.synthetic.main.activity_vocabulary_item.*
 import org.koreanNotebook.com.janaszek.kn.flashcards.FlashcardModel
 import org.koreanNotebook.com.janaszek.kn.vocabulary.VocabularyEntry
@@ -44,6 +45,9 @@ class VocabularyItemActivity : AppCompatActivity() {
                 this?.putString("cards", json)
                 this?.apply()
             }
+
+            var words = FlashcardWords()
+            words.words.add(VocabularyEntry(word, description))
 
 //            val i = Intent(this, FlashcardsActivity::class.java)
 ////            i.putExtra("cards", cards)

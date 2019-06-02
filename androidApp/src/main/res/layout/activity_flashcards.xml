@@ -1,24 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-tools:context=".flashcards.FlashcardsActivity"
-android:onClick="flipCard">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".flashcards.FlashcardsActivity">
 
     <FrameLayout
-        android:id="@+id/card_back"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <include layout="@layout/card_back" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="flipCard">
+        <FrameLayout
+            android:id="@+id/card_back"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <include layout="@layout/card_back" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/card_front"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center">
+            <include layout="@layout/card_front" />
+        </FrameLayout>
     </FrameLayout>
 
-    <FrameLayout
-        android:id="@+id/card_front"
+    <LinearLayout
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center">
-        <include layout="@layout/card_front" />
-    </FrameLayout>
+        android:layout_height="0dp">
 
-</FrameLayout>
+        <Button
+            android:id="@+id/hard_card_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hard_flashcard" />
+
+        <Button
+            android:id="@+id/next_card_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/next_flashcard" />
+    </LinearLayout>
+
+</LinearLayout>
