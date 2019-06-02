@@ -9,4 +9,7 @@
     <string name="intermediate">Intermediate</string>
     <string name="front">Front</string>
     <string name="back">Back</string>
+
+
+    <string name="preference_file_key">preference_file_key</string>
 </resources>

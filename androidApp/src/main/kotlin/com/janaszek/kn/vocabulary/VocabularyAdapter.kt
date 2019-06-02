@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.janaszek.kn.R
 import kotlinx.android.synthetic.main.activity_vocabulary_rv_item.view.*
-import org.koreanNotebook.com.janaszek.kn.VocabularyEntry
+import org.koreanNotebook.com.janaszek.kn.vocabulary.VocabularyEntry
 
 class VocabularyAdapter : RecyclerView.Adapter<VocabularyAdapter.ViewHolder>() {
 

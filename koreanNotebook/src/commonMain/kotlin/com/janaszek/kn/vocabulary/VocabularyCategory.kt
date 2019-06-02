@@ -1,4 +1,4 @@
-package org.koreanNotebook.com.janaszek.kn
+package org.koreanNotebook.com.janaszek.kn.vocabulary
 
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.JsonArray

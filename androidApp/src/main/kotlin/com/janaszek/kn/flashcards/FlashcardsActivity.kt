@@ -5,7 +5,9 @@ import android.os.Bundle
 import com.janaszek.kn.R
 import android.animation.AnimatorInflater
 import android.animation.AnimatorSet
+import android.content.Context
 import android.view.View
+import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_flashcards.*
 import kotlinx.android.synthetic.main.card_back.*
 import kotlinx.android.synthetic.main.card_front.*
@@ -26,8 +28,13 @@ class FlashcardsActivity : AppCompatActivity() {
 //        var cards = intent.extras.getSerializable("cards") as? FlashcardModel
         findViews()
 
-//        card_front_text.text = cards?.words?.get(0)?.word
-//        card_back_text.text = cards?.words?.get(0)?.description
+        val sharedPref = applicationContext?.getSharedPreferences(
+                getString(R.string.preference_file_key), Context.MODE_PRIVATE)
+        val json = sharedPref?.getString("cards", "")
+        val obj = Gson().fromJson<FlashcardModel>(json, FlashcardModel::class.java!!)
+
+        card_front_text.text = obj.words.get(0).word
+        card_back_text.text = obj.words.get(0).description
 
         loadAnimations()
         changeCameraDistance()

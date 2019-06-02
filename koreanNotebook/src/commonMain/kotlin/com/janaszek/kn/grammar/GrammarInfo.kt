@@ -1,4 +1,4 @@
-package org.koreanNotebook.com.janaszek.kn
+package org.koreanNotebook.com.janaszek.kn.grammar
 
 import kotlinx.serialization.Serializable
 

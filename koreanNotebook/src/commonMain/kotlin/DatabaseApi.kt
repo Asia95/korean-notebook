@@ -6,31 +6,13 @@ import kotlinx.coroutines.*
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonObject
 import org.koreanNotebook.com.janaszek.kn.*
+import org.koreanNotebook.com.janaszek.kn.grammar.GrammarEntry
+import org.koreanNotebook.com.janaszek.kn.vocabulary.VocabularyEntry
 
 class DatabaseApi {
 
     private val httpClient = HttpClient()
     private val databaseURL = "https://api.myjson.com/bins/wdc5k"
-
-    fun getGrammarCategories(success: (List<String>) -> Unit, failure: (Throwable?) -> Unit) {
-        GlobalScope.launch(ApplicationDispatcher) {
-            try {
-                val database = httpClient.get<String>(databaseURL)
-
-                var grammar = Json.nonstrict.parse(Database.serializer(), database).grammar
-
-                var grammarCategory: ArrayList<String> = ArrayList()
-                grammar.category
-                val iterator = grammar.category.iterator()
-                iterator.forEach { cat ->
-                    cat.jsonObject.forEach { gram -> grammarCategory.add(gram.key) }
-                }
-                success(grammarCategory)
-            } catch (ex: Exception) {
-                failure(ex)
-            }
-        }
-    }
 
     fun getBeginnerGrammar(success: (List<GrammarEntry>) -> Unit, failure: (Throwable?) -> Unit) {
         GlobalScope.launch(ApplicationDispatcher) {

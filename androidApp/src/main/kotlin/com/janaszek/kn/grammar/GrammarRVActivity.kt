@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
 import com.janaszek.kn.R
 import kotlinx.android.synthetic.main.activity_grammar_rv.*
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -53,7 +52,7 @@ class GrammarRVActivity : AppCompatActivity(), CoroutineScope {
         ex?.printStackTrace()
         launch (Dispatchers.Main){
             val msg = ex?.message ?: "Unknown error"
-            Snackbar.make(root_view, msg, Snackbar.LENGTH_INDEFINITE)
+            Snackbar.make(activity_grammar_rv, msg, Snackbar.LENGTH_INDEFINITE)
                     .setAction("Retry") { loadList() }
                     .show()
         }
