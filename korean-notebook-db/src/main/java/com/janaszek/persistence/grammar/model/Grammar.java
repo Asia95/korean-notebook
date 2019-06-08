@@ -15,7 +15,6 @@ public class Grammar {
 
     @ManyToOne
     @JoinColumn(foreignKey = @ForeignKey(name = "category_idcategory"))
-    @Column(nullable = false)
     private Category category;
 
     public long getIdgrammar() {

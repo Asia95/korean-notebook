@@ -18,7 +18,6 @@ public class GrammarEntry {
 
     @ManyToOne
     @JoinColumn(foreignKey = @ForeignKey(name = "grammar_idgrammar"))
-    @Column(nullable = false)
     private Grammar grammar;
 
     public GrammarEntry() {

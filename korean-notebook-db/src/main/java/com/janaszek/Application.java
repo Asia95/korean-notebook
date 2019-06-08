@@ -8,8 +8,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @ServletComponentScan
 @SpringBootApplication(scanBasePackages = "com.janaszek")
-@EnableJpaRepositories("com.janaszek.persistence.repo")
-@EntityScan("com.janaszek.persistence.model")
+@EnableJpaRepositories("com.janaszek.persistence")
+@EntityScan("com.janaszek.persistence")
 public class Application {
 
     public static void main(String[] args) {

@@ -1,8 +1,6 @@
 package com.janaszek.web;
 
-import com.janaszek.persistence.model.Category;
 import com.janaszek.persistence.grammar.model.GrammarEntry;
-import com.janaszek.persistence.repo.CategoryRepository;
 import com.janaszek.persistence.grammar.repo.GrammarEntryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,17 +13,9 @@ public class GrammarController {
     @Autowired
     private GrammarEntryRepository grammarEntryRepository;
 
-    @Autowired
-    private CategoryRepository categoryRepository;
-
     @GetMapping
     public Iterable<GrammarEntry> findAll() {
         return grammarEntryRepository.findAll();
-    }
-
-    @GetMapping("/category")
-    public Iterable<Category> findAllCategory() {
-        return categoryRepository.findAll();
     }
 
 //    @GetMapping("/title/{bookTitle}")
