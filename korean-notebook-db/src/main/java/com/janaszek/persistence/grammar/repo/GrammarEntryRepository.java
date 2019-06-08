@@ -1,6 +1,6 @@
-package com.janaszek.persistence.repo;
+package com.janaszek.persistence.grammar.repo;
 
-import com.janaszek.persistence.model.GrammarEntry;
+import com.janaszek.persistence.grammar.model.GrammarEntry;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

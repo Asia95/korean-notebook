@@ -1,4 +1,4 @@
-package com.janaszek.persistence.model;
+package com.janaszek.persistence.grammar.model;
 
 import javax.persistence.*;
 
@@ -16,18 +16,20 @@ public class GrammarEntry {
     @Column
     private String title;
 
+    @ManyToOne
+    @JoinColumn(foreignKey = @ForeignKey(name = "grammar_idgrammar"))
     @Column(nullable = false)
-    private long grammar_idgrammar;
+    private Grammar grammar;
 
     public GrammarEntry() {
         super();
     }
 
-    public GrammarEntry(String title, String body, long grammar_idgrammar) {
+    public GrammarEntry(String title, String body, Grammar grammar) {
         super();
         this.title = title;
         this.body = body;
-        this.grammar_idgrammar = grammar_idgrammar;
+        this.grammar = grammar;
     }
 
     public long getIdgrammar_entry() {
@@ -46,12 +48,20 @@ public class GrammarEntry {
         this.body = body;
     }
 
-    public long getGrammar_idgrammar() {
-        return grammar_idgrammar;
+    public String getTitle() {
+        return title;
     }
 
-    public void setGrammar_idgrammar(long grammar_idgrammar) {
-        this.grammar_idgrammar = grammar_idgrammar;
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public Grammar getGrammar() {
+        return grammar;
+    }
+
+    public void setGrammar(Grammar grammar) {
+        this.grammar = grammar;
     }
 
     @Override

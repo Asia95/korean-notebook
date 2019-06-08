@@ -1,17 +1,11 @@
 package com.janaszek.web;
 
-import com.janaszek.persistence.model.Book;
 import com.janaszek.persistence.model.Category;
-import com.janaszek.persistence.model.GrammarEntry;
+import com.janaszek.persistence.grammar.model.GrammarEntry;
 import com.janaszek.persistence.repo.CategoryRepository;
-import com.janaszek.persistence.repo.GrammarEntryRepository;
-import com.janaszek.web.exception.BookIdMismatchException;
-import com.janaszek.web.exception.BookNotFoundException;
+import com.janaszek.persistence.grammar.repo.GrammarEntryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 
 @RestController
@@ -42,7 +36,7 @@ public class GrammarController {
 //    @GetMapping("/{id}")
 //    public Book findOne(@PathVariable long id) {
 //        return bookRepository.findById(id)
-//                .orElseThrow(BookNotFoundException::new);
+//                .orElseThrow(NotFoundException::new);
 //    }
 //
 //    @PostMapping
@@ -55,7 +49,7 @@ public class GrammarController {
 //    @DeleteMapping("/{id}")
 //    public void delete(@PathVariable long id) {
 //        bookRepository.findById(id)
-//                .orElseThrow(BookNotFoundException::new);
+//                .orElseThrow(NotFoundException::new);
 //        bookRepository.deleteById(id);
 //    }
 //
@@ -65,7 +59,7 @@ public class GrammarController {
 //            throw new BookIdMismatchException();
 //        }
 //        bookRepository.findById(id)
-//                .orElseThrow(BookNotFoundException::new);
+//                .orElseThrow(NotFoundException::new);
 //        return bookRepository.save(book);
 //    }
 }
