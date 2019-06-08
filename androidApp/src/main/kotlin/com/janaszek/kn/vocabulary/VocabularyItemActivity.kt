@@ -17,6 +17,7 @@ class VocabularyItemActivity : AppCompatActivity() {
 
     var word: String = ""
     var description: String = ""
+    var words = FlashcardWords()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,7 +47,6 @@ class VocabularyItemActivity : AppCompatActivity() {
                 this?.apply()
             }
 
-            var words = FlashcardWords()
             words.words.add(VocabularyEntry(word, description))
 
 //            val i = Intent(this, FlashcardsActivity::class.java)

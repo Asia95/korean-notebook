@@ -33,15 +33,26 @@ class FlashcardsActivity : AppCompatActivity() {
         val json = sharedPref?.getString("cards", "")
         val obj = Gson().fromJson<FlashcardModel>(json, FlashcardModel::class.java!!)
 
-        var words = FlashcardWords()
+        var words = FlashcardWords().words.iterator()
 
-        card_front_text.text = obj.words.get(0).word
-        card_back_text.text = obj.words.get(0).description
+        if (words.hasNext()) {
+            val word = words.next()
+            card_front_text.text = word.word
+            card_back_text.text = word.description
+        }
 
         loadAnimations()
         changeCameraDistance()
 
-        next_card_btn.setOnClickListener {  }
+        next_card_btn.setOnClickListener {
+            if (words.hasNext()) {
+                val word = words.next()
+                card_front_text.text = word.word
+                card_back_text.text = word.description
+            } else {
+                flashcard.visibility = View.GONE
+            }
+        }
     }
 
     private fun changeCameraDistance() {

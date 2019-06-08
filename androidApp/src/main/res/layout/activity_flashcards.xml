@@ -7,6 +7,7 @@
     tools:context=".flashcards.FlashcardsActivity">
 
     <FrameLayout
+        android:id="@+id/flashcard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -26,6 +27,23 @@
             android:gravity="center">
             <include layout="@layout/card_front" />
         </FrameLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/flashcard_end"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/flashcard_end_text"
+            android:text="@string/flashcard_end"
+            android:textColor="@color/cardBack"
+            style="@style/Base.TextAppearance.AppCompat.Display1"
+            android:gravity="center"/>
     </FrameLayout>
 
     <LinearLayout
