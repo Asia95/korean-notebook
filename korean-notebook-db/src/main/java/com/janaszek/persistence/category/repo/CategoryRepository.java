@@ -1,6 +1,6 @@
-package com.janaszek.persistence.repo;
+package com.janaszek.persistence.category.repo;
 
-import com.janaszek.persistence.model.Category;
+import com.janaszek.persistence.category.model.Category;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

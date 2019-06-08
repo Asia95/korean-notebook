@@ -99,7 +99,7 @@ public class GrammarEntry {
 
     @Override
     public String toString() {
-        return "Grammar Entry [id=" + idgrammar_entry + ", title=" + title + ", body=" + body + "]";
+        return "Vocabulary Entry [id=" + idgrammar_entry + ", title=" + title + ", body=" + body + "]";
     }
 
 }

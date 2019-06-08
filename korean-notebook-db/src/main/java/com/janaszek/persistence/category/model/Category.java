@@ -1,4 +1,4 @@
-package com.janaszek.persistence.model;
+package com.janaszek.persistence.category.model;
 
 import javax.persistence.*;
 import java.util.Objects;

@@ -1,7 +1,7 @@
 package com.janaszek.web;
 
-import com.janaszek.persistence.model.Category;
-import com.janaszek.persistence.repo.CategoryRepository;
+import com.janaszek.persistence.category.model.Category;
+import com.janaszek.persistence.category.repo.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
