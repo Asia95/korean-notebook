@@ -5,18 +5,17 @@ import android.os.Bundle
 import com.janaszek.kn.R
 import android.animation.AnimatorInflater
 import android.animation.AnimatorSet
-import android.content.Context
 import android.view.View
-import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_flashcards.*
 import kotlinx.android.synthetic.main.card_back.*
 import kotlinx.android.synthetic.main.card_front.*
-import org.koreanNotebook.com.janaszek.kn.flashcards.FlashcardModel
 
 class FlashcardsActivity : AppCompatActivity() {
 
     private var mSetRightOut: AnimatorSet? = null
     private var mSetLeftIn: AnimatorSet? = null
+    private var mSetFlipOut: AnimatorSet? = null
+    private var mSetFlipIn: AnimatorSet? = null
     private var mIsBackVisible = false
     private var mCardFrontLayout: View? = null
     private var mCardBackLayout: View? = null
@@ -25,16 +24,9 @@ class FlashcardsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_flashcards)
-//        var cards = intent.extras.getSerializable("cards") as? FlashcardModel
         findViews()
 
-        val sharedPref = applicationContext?.getSharedPreferences(
-                getString(R.string.preference_file_key), Context.MODE_PRIVATE)
-        val json = sharedPref?.getString("cards", "")
-        val obj = Gson().fromJson<FlashcardModel>(json, FlashcardModel::class.java!!)
-
-        var words = FlashcardWords().words.iterator()
-
+        val words = FlashcardWords.Companion.words.iterator()
         if (words.hasNext()) {
             val word = words.next()
             card_front_text.text = word.word
@@ -46,11 +38,19 @@ class FlashcardsActivity : AppCompatActivity() {
 
         next_card_btn.setOnClickListener {
             if (words.hasNext()) {
+                if (mIsBackVisible)
+                    flipCardNow(mCardFrontLayout)
                 val word = words.next()
                 card_front_text.text = word.word
                 card_back_text.text = word.description
             } else {
                 flashcard.visibility = View.GONE
+                if (savedInstanceState == null) {
+                    supportFragmentManager
+                            .beginTransaction()
+                            .add(R.id.flashcards_view, FlashcardsEndFragment.newInstance(), "flashcardsEnd")
+                            .commit()
+                }
             }
         }
     }
@@ -65,6 +65,8 @@ class FlashcardsActivity : AppCompatActivity() {
     private fun loadAnimations() {
         mSetRightOut = AnimatorInflater.loadAnimator(this, R.animator.out_animation) as AnimatorSet
         mSetLeftIn = AnimatorInflater.loadAnimator(this, R.animator.in_animation) as AnimatorSet
+        mSetFlipOut = AnimatorInflater.loadAnimator(this, R.animator.flip_out) as AnimatorSet
+        mSetFlipIn = AnimatorInflater.loadAnimator(this, R.animator.flip_in) as AnimatorSet
     }
 
     private fun findViews() {
@@ -72,7 +74,7 @@ class FlashcardsActivity : AppCompatActivity() {
         mCardFrontLayout = card_front
     }
 
-    fun flipCard(view: View) {
+    fun flipCard(view: View?) {
         if (!mIsBackVisible) {
             mSetRightOut?.setTarget(mCardFrontLayout)
             mSetLeftIn?.setTarget(mCardBackLayout)
@@ -85,6 +87,16 @@ class FlashcardsActivity : AppCompatActivity() {
             mSetRightOut?.start()
             mSetLeftIn?.start()
             mIsBackVisible = false
+        }
+    }
+
+    fun flipCardNow(view: View?) {
+        if (mIsBackVisible) {
+            mSetFlipOut?.setTarget(mCardFrontLayout)
+            mSetFlipIn?.setTarget(mCardBackLayout)
+            mSetFlipOut?.start()
+            mSetFlipIn?.start()
+            mIsBackVisible = true
         }
     }
 }

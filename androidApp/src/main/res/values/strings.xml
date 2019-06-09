@@ -15,4 +15,6 @@
     <string name="next_flashcard">Next</string>
     <string name="hard_flashcard">Hard</string>
     <string name="flashcard_end">No more flashcards</string>
+    <string name="flashcards_again_text">Review again</string>
+    <string name="flashcards_end_text">No more flashcards</string>
 </resources>
