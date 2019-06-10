@@ -18,19 +18,24 @@ public class VocabularyController {
     @Autowired
     private VocabularyEntryRepository vocabularyEntryRepository;
 
-    @GetMapping
+    @GetMapping(produces = "application/json;charset=UTF-8")
     public Iterable<VocabularyEntry> findAll() {
         return vocabularyEntryRepository.findAll();
     }
 
-    @GetMapping(params = "category")
+    @GetMapping(params = "category", produces = "application/json;charset=UTF-8")
     public List<VocabularyEntry> findByCategory(@RequestParam("category") String category) {
         return vocabularyEntryRepository.findByVocabularyCategoryCategory(category);
     }
 
-    @GetMapping(params = "id")
+    @GetMapping(params = "id", produces = "application/json;charset=UTF-8")
     public VocabularyEntry findById(@RequestParam("id") long id) {
         return vocabularyEntryRepository.findById(id);
+    }
+
+    @GetMapping(params = "search", produces = "application/json;charset=UTF-8")
+    public List<VocabularyEntry> searchByTitleOrDescription(@RequestParam("search") String search) {
+        return vocabularyEntryRepository.searchByTitleOrDescription(search);
     }
 
 //

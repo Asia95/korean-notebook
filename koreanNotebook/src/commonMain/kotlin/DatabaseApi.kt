@@ -4,33 +4,24 @@ import io.ktor.client.HttpClient
 import io.ktor.client.request.get
 import kotlinx.coroutines.*
 import kotlinx.serialization.json.Json
-import kotlinx.serialization.json.JsonObject
-import org.koreanNotebook.com.janaszek.kn.*
+import kotlinx.serialization.json.JsonArray
+import org.koreanNotebook.com.janaszek.kn.grammar.Grammar
 import org.koreanNotebook.com.janaszek.kn.grammar.GrammarEntry
 import org.koreanNotebook.com.janaszek.kn.vocabulary.VocabularyEntry
 
 class DatabaseApi {
 
     private val httpClient = HttpClient()
-    private val databaseURL = "https://api.myjson.com/bins/wdc5k"
+    private val databaseURL = "https://korean-notebook.appspot.com/api"
 
-    fun getBeginnerGrammar(success: (List<GrammarEntry>) -> Unit, failure: (Throwable?) -> Unit) {
+    fun getGrammarByCategory(category: String, success: (List<GrammarEntry>) -> Unit, failure: (Throwable?) -> Unit) {
         GlobalScope.launch(ApplicationDispatcher) {
             try {
-                val database = httpClient.get<String>(databaseURL)
-
-                var grammar = Json.nonstrict.parse(Database.serializer(), database).grammar
-
+                val database = httpClient.get<String>("$databaseURL/grammar?category=$category")
                 val grammarEntry: ArrayList<GrammarEntry> = ArrayList()
-                val iterator = grammar.category.iterator()
-                while (iterator.hasNext()) {
-                    val cat = iterator.next()
-                    val beginer = (cat as JsonObject).getArray("beginner")
-                    beginer.forEach {
-                        val entry = Json.nonstrict.parse(GrammarEntry.serializer(), it.toString())
-                        grammarEntry.add(entry)
-                    }
-                    break
+                (Json.nonstrict.parseJson(database) as JsonArray).forEach {
+                    val entry = Json.nonstrict.parse(GrammarEntry.serializer(), it.toString())
+                    grammarEntry.add(entry)
                 }
                 success(grammarEntry)
             } catch (ex: Exception) {
@@ -39,25 +30,42 @@ class DatabaseApi {
         }
     }
 
-    fun getBeginnerVocabulary(success: (List<VocabularyEntry>) -> Unit, failure: (Throwable?) -> Unit) {
+    fun getVocabularyByCategory(category: String, success: (List<VocabularyEntry>) -> Unit, failure: (Throwable?) -> Unit) {
         GlobalScope.launch(ApplicationDispatcher) {
             try {
-                val database = httpClient.get<String>(databaseURL)
-
-                var vocabulary = Json.nonstrict.parse(Database.serializer(), database).vocabulary
-
+                val database = httpClient.get<String>("$databaseURL/vocabulary?category=$category")
                 val vocabularyEntry: ArrayList<VocabularyEntry> = ArrayList()
-                val iterator = vocabulary.category.iterator()
-                while (iterator.hasNext()) {
-                    val cat = iterator.next()
-                    val beginer = (cat as JsonObject).getArray("beginer")
-                    beginer.forEach {
-                        val entry = Json.nonstrict.parse(VocabularyEntry.serializer(), it.toString())
-                        vocabularyEntry.add(entry)
-                    }
-                    break
+                (Json.nonstrict.parseJson(database) as JsonArray).forEach {
+                    val entry = Json.nonstrict.parse(VocabularyEntry.serializer(), it.toString())
+                    vocabularyEntry.add(entry)
                 }
                 success(vocabularyEntry)
+            } catch (ex: Exception) {
+                failure(ex)
+            }
+        }
+    }
+
+    fun searchInVocabulary(query: String, success: (List<VocabularyEntry>) -> Unit, failure: (Throwable?) -> Unit) {
+        GlobalScope.launch(ApplicationDispatcher) {
+            try {
+                val database = httpClient.get<String>("$databaseURL/vocabulary?search=$query")
+                var vocabulary = Json.nonstrict.parse(Grammar.serializer(), database)
+                val vocabularyEntry: ArrayList<VocabularyEntry> = ArrayList()
+                success(vocabularyEntry)
+            } catch (ex: Exception) {
+                failure(ex)
+            }
+        }
+    }
+
+    fun searchInGrammar(query: String, success: (List<GrammarEntry>) -> Unit, failure: (Throwable?) -> Unit) {
+        GlobalScope.launch(ApplicationDispatcher) {
+            try {
+                val database = httpClient.get<String>("$databaseURL/grammar?search=$query")
+                var grammar = Json.nonstrict.parse(Grammar.serializer(), database)
+                val grammarEntry: ArrayList<GrammarEntry> = ArrayList()
+                success(grammarEntry)
             } catch (ex: Exception) {
                 failure(ex)
             }

@@ -5,12 +5,14 @@ import kotlinx.serialization.Transient
 
 @Serializable
 data class VocabularyEntry (
-        val word: String,
-        val description: String
+        val idvocabulary_entry: Int,
+        val description: String,
+        val title: String,
+        val vocabulary: Vocabulary
 ){
     @Transient
     val label: String
         get() {
-            return "N°$word\t\t$description"
+            return "N°$title\t\t$description"
         }
 }

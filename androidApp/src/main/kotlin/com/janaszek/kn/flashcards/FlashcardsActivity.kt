@@ -14,8 +14,6 @@ class FlashcardsActivity : AppCompatActivity() {
 
     private var mSetRightOut: AnimatorSet? = null
     private var mSetLeftIn: AnimatorSet? = null
-    private var mSetFlipOut: AnimatorSet? = null
-    private var mSetFlipIn: AnimatorSet? = null
     private var mIsBackVisible = false
     private var mCardFrontLayout: View? = null
     private var mCardBackLayout: View? = null
@@ -39,7 +37,7 @@ class FlashcardsActivity : AppCompatActivity() {
         next_card_btn.setOnClickListener {
             if (words.hasNext()) {
                 if (mIsBackVisible)
-                    flipCardNow(mCardFrontLayout)
+                    flipCard(mCardFrontLayout)
                 val word = words.next()
                 card_front_text.text = word.word
                 card_back_text.text = word.description
@@ -65,8 +63,6 @@ class FlashcardsActivity : AppCompatActivity() {
     private fun loadAnimations() {
         mSetRightOut = AnimatorInflater.loadAnimator(this, R.animator.out_animation) as AnimatorSet
         mSetLeftIn = AnimatorInflater.loadAnimator(this, R.animator.in_animation) as AnimatorSet
-        mSetFlipOut = AnimatorInflater.loadAnimator(this, R.animator.flip_out) as AnimatorSet
-        mSetFlipIn = AnimatorInflater.loadAnimator(this, R.animator.flip_in) as AnimatorSet
     }
 
     private fun findViews() {
@@ -87,16 +83,6 @@ class FlashcardsActivity : AppCompatActivity() {
             mSetRightOut?.start()
             mSetLeftIn?.start()
             mIsBackVisible = false
-        }
-    }
-
-    fun flipCardNow(view: View?) {
-        if (mIsBackVisible) {
-            mSetFlipOut?.setTarget(mCardFrontLayout)
-            mSetFlipIn?.setTarget(mCardBackLayout)
-            mSetFlipOut?.start()
-            mSetFlipIn?.start()
-            mIsBackVisible = true
         }
     }
 }

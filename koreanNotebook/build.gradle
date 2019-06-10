@@ -29,6 +29,7 @@ android {
 
 dependencies {
     implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7'
+    implementation "com.google.code.gson:gson:2.8.5"
 
     testImplementation 'junit:junit:4.12'
     testImplementation 'org.jetbrains.kotlin:kotlin-test'
@@ -72,6 +73,7 @@ kotlin {
                 implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core-common:$coroutine_version"
                 implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime-common:$serializer_version"
                 implementation "io.ktor:ktor-client-core:$ktor_version"
+                implementation "com.google.code.gson:gson:2.8.5"
             }
         }
         commonTest {

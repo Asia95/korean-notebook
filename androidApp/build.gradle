@@ -35,8 +35,6 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
     implementation project(':koreanNotebook')
 
-    compile 'com.google.code.gson:gson:2.8.2'
-
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
     implementation 'org.jetbrains.kotlin:kotlin-stdlib'

@@ -5,8 +5,10 @@ import kotlinx.serialization.Transient
 
 @Serializable
 data class GrammarEntry (
-    val body: String,
-    val title: String
+        val idgrammar_entry: Int,
+        val body: String,
+        val title: String,
+        val grammar: Grammar
 ){
     @Transient
     val label: String

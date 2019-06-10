@@ -31,8 +31,8 @@ class VocabularyRVActivity : AppCompatActivity(), CoroutineScope {
         job = Job()
         api = DatabaseApi()
 
-        intent.getStringExtra("category")
-        loadList()
+        val category = intent.getStringExtra("category")
+        loadList(category)
     }
 
     private fun setupRecyclerView() {
@@ -41,8 +41,9 @@ class VocabularyRVActivity : AppCompatActivity(), CoroutineScope {
         vocabularylist_rv.addItemDecoration(DividerItemDecoration(this, LinearLayoutManager.VERTICAL))
     }
 
-    private fun loadList(){
-        api.getBeginnerVocabulary (
+    private fun loadList(category: String){
+        api.getVocabularyByCategory (
+                category = category,
                 success = { launch(Dispatchers.Main) { adapter.updateData(it) }},
                 failure = ::handleError
         )
@@ -53,7 +54,7 @@ class VocabularyRVActivity : AppCompatActivity(), CoroutineScope {
         launch (Dispatchers.Main){
             val msg = ex?.message ?: "Unknown error"
             Snackbar.make(activity_vocabulary_rv, msg, Snackbar.LENGTH_INDEFINITE)
-                    .setAction("Retry") { loadList() }
+                    .setAction("Retry") { loadList(intent.getStringExtra("category")) }
                     .show()
         }
     }

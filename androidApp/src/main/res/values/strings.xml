@@ -17,4 +17,5 @@
     <string name="flashcard_end">No more flashcards</string>
     <string name="flashcards_again_text">Review again</string>
     <string name="flashcards_end_text">No more flashcards</string>
+    <string name="search_hint">Search grammar or vocabulary</string>
 </resources>

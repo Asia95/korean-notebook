@@ -7,6 +7,7 @@ import com.janaszek.kn.flashcards.FlashcardsActivity
 import com.janaszek.kn.grammar.GrammarCategoryActivity
 import com.janaszek.kn.vocabulary.VocabularyCategoryActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import android.widget.SearchView
 
 class MainActivity : AppCompatActivity() {
 
@@ -29,6 +30,19 @@ class MainActivity : AppCompatActivity() {
             startActivity(i)
         }
 
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+
+            override fun onQueryTextChange(newText: String): Boolean {
+                return false
+            }
+
+            override fun onQueryTextSubmit(query: String): Boolean {
+                search(query)
+                return false
+            }
+
+        })
+
 //        val dbHandler = DBOpenHelper(this, null)
 //        val user = VocabularyWordModel("hello")
 //        dbHandler.addName(user)
@@ -45,5 +59,11 @@ class MainActivity : AppCompatActivity() {
 //        val tv = TextView(this)
 //        tv.text = product.toString()
 //        rootLayout.addView(tv)
+    }
+
+    private fun search(query: String) {
+        val i = Intent(this, SearchActivity::class.java)
+        i.putExtra("query", query)
+        startActivity(i)
     }
 }
