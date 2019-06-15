@@ -12,9 +12,9 @@ class GrammarCategoryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_grammar_category)
 
-        grammar_beginer_btn.setOnClickListener {
+        grammar_beginner_btn.setOnClickListener {
             val i = Intent(this, GrammarRVActivity::class.java)
-            i.putExtra("category", grammar_beginer_btn.text)
+            i.putExtra("category", grammar_beginner_btn.text)
             startActivity(i)
         }
 

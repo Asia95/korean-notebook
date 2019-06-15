@@ -33,7 +33,7 @@ class VocabularyItemActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean = when (item.itemId) {
         R.id.mybutton -> {
-            FlashcardWords.Companion.words.add(VocabularyEntry(word, description))
+            FlashcardWords.Companion.words.add(VocabularyEntry(description, word))
             Toast.makeText(applicationContext, "Added to flashcards", Toast.LENGTH_LONG).show()
             true
         }

@@ -27,7 +27,7 @@ class FlashcardsActivity : AppCompatActivity() {
         val words = FlashcardWords.Companion.words.iterator()
         if (words.hasNext()) {
             val word = words.next()
-            card_front_text.text = word.word
+            card_front_text.text = word.title
             card_back_text.text = word.description
         }
 
@@ -39,7 +39,7 @@ class FlashcardsActivity : AppCompatActivity() {
                 if (mIsBackVisible)
                     flipCard(mCardFrontLayout)
                 val word = words.next()
-                card_front_text.text = word.word
+                card_front_text.text = word.title
                 card_back_text.text = word.description
             } else {
                 flashcard.visibility = View.GONE

@@ -22,7 +22,7 @@ class VocabularyAdapter : RecyclerView.Adapter<VocabularyAdapter.ViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.word?.text = vocabularyList[position].word
+        holder.word?.text = vocabularyList[position].title
         holder.description = vocabularyList[position].description
         holder.preview?.text = vocabularyList[position].description.take(50) + "..."
     }

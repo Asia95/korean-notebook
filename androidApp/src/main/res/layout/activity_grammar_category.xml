@@ -8,10 +8,10 @@
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/grammar_beginer_btn"
+        android:id="@+id/grammar_beginner_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/beginer" />
+        android:text="@string/beginner" />
 
     <Button
         android:id="@+id/grammar_intermediate_btn"

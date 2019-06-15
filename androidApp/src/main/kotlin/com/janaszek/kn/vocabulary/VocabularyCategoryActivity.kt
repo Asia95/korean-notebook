@@ -12,9 +12,9 @@ class VocabularyCategoryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_vocabulary_category)
 
-        vocabulary_beginer_btn.setOnClickListener {
+        vocabulary_beginner_btn.setOnClickListener {
             val i = Intent(this, VocabularyRVActivity::class.java)
-            i.putExtra("category", vocabulary_beginer_btn.text)
+            i.putExtra("category", vocabulary_beginner_btn.text)
             startActivity(i)
         }
 
