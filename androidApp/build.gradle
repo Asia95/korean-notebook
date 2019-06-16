@@ -27,7 +27,12 @@ android {
     buildToolsVersion = '28.0.3'
 }
 
+kotlin {
+    targets.fromPreset(presets.android, 'android')
+}
+
 dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
     implementation project(':koreanNotebook')
 

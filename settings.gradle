@@ -27,4 +27,5 @@ pluginManagement {
 
 enableFeaturePreview('GRADLE_METADATA')
 
-include ':koreanNotebook', ':androidApp'
+include ':koreanNotebook'
+include ':androidApp'
