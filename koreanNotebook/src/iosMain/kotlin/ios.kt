@@ -2,19 +2,13 @@ package org.koreanNotebook
 
 import kotlinx.cinterop.alloc
 import kotlinx.cinterop.memScoped
-import platform.posix.uname
-import platform.posix.utsname
 
 actual class Platform actual constructor() {
     actual val platform: String = "iOS"
 }
 
 actual class Product(actual val user: String) {
-    val model: String = memScoped {
-        val systemInfo = alloc<utsname>()
-        uname(systemInfo.ptr)
-        systemInfo.machine.toKString()
-    }
+    val model: String = "lalala"
 
     fun iosSpecificOperation() {
         println("I am $model")
