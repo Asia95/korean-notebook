@@ -6,7 +6,7 @@ group = 'org.shared'
 version = 1.0
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 28
     defaultConfig {
         minSdkVersion 15
     }
@@ -29,8 +29,8 @@ dependencies {
     androidTestImplementation 'org.jetbrains.kotlin:kotlin-test'
     androidTestImplementation 'org.jetbrains.kotlin:kotlin-test-junit'
 
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    androidTestImplementation 'androidx.test:runner:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
 }
 
 kotlin {
@@ -114,12 +114,12 @@ task copyFramework {
 
     doLast {
         def srcFile = kotlin.targets.ios.binaries.getFramework(buildType).outputFile
-        def targetDir = getProperty("configuration.build.dir")
+        def targetDir = buildDir
         copy {
             from srcFile.parent
             into targetDir
-            include 'koreanNotebook.framework/**'
-            include 'koreanNotebook.framework.dSYM'
+            include 'GifLibrary.framework/**'
+            include 'GifLibrary.framework.dSYM'
         }
     }
 }
