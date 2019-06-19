@@ -15,9 +15,11 @@
         <activity android:name=".flashcards.FlashcardsActivity" />
         <activity android:name=".grammar.GrammarItemActivity" />
         <activity android:name=".grammar.GrammarRVActivity" />
+        <activity android:name=".grammar.GrammarRVActivity2" />
         <activity android:name=".grammar.GrammarCategoryActivity" />
         <activity android:name=".vocabulary.VocabularyItemActivity" />
         <activity android:name=".vocabulary.VocabularyRVActivity" />
+        <activity android:name=".vocabulary.VocabularyRVActivity2" />
         <activity android:name=".vocabulary.VocabularyCategoryActivity" />
         <activity
             android:name=".MainActivity"

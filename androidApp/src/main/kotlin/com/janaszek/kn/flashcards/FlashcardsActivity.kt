@@ -28,7 +28,7 @@ class FlashcardsActivity : AppCompatActivity() {
         if (words.hasNext()) {
             val word = words.next()
             card_front_text.text = word.title
-            card_back_text.text = word.description
+            card_back_text.text = word.explanation
         }
 
         loadAnimations()
@@ -40,7 +40,7 @@ class FlashcardsActivity : AppCompatActivity() {
                     flipCard(mCardFrontLayout)
                 val word = words.next()
                 card_front_text.text = word.title
-                card_back_text.text = word.description
+                card_back_text.text = word.explanation
             } else {
                 flashcard.visibility = View.GONE
                 if (savedInstanceState == null) {

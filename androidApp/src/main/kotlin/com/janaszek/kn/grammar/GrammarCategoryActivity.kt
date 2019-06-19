@@ -13,13 +13,13 @@ class GrammarCategoryActivity : AppCompatActivity() {
         setContentView(R.layout.activity_grammar_category)
 
         grammar_beginner_btn.setOnClickListener {
-            val i = Intent(this, GrammarRVActivity::class.java)
+            val i = Intent(this, GrammarRVActivity2::class.java)
             i.putExtra("category", grammar_beginner_btn.text)
             startActivity(i)
         }
 
         grammar_intermediate_btn.setOnClickListener {
-            val i = Intent(this, GrammarRVActivity::class.java)
+            val i = Intent(this, GrammarRVActivity2::class.java)
             i.putExtra("category", grammar_intermediate_btn.text)
             startActivity(i)
         }

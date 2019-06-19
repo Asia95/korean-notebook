@@ -33,7 +33,7 @@ class SearchActivity : AppCompatActivity(), CoroutineScope {
         setupRecyclerView()
         job = Job()
         var query = intent.getStringExtra("query")
-        api = DatabaseApi()
+        api = ServiceLocator.databaseApi
 
         searchInGrammar(query)
         searchInVocabulary(query)

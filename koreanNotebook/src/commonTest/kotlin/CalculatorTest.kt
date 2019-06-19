@@ -9,11 +9,5 @@ open class CalculatorTest {
     fun testSum() {
         assertEquals(3, 1+2)
     }
-
-    @Test
-    fun testFactory() {
-        val product = Factory.create(mapOf("user" to "jetbrains"))
-        assertEquals(product.user, "jetbrains")
-    }
 }
 

@@ -1,6 +1,7 @@
 package org.koreanNotebook
 
 import io.ktor.client.HttpClient
+import io.ktor.client.engine.HttpClientEngine
 import io.ktor.client.request.get
 import kotlinx.coroutines.*
 import kotlinx.serialization.json.Json
@@ -9,9 +10,9 @@ import org.koreanNotebook.com.janaszek.kn.grammar.Grammar
 import org.koreanNotebook.com.janaszek.kn.grammar.GrammarEntry
 import org.koreanNotebook.com.janaszek.kn.vocabulary.VocabularyEntry
 
-class DatabaseApi {
+class DatabaseApi(clientEngine: HttpClientEngine) {
 
-    private val httpClient = HttpClient()
+    private val httpClient = HttpClient(clientEngine)
     private val databaseURL = "https://korean-notebook.appspot.com/api"
 
     fun getGrammarByCategory(category: String, success: (List<GrammarEntry>) -> Unit, failure: (Throwable?) -> Unit) {
@@ -28,6 +29,26 @@ class DatabaseApi {
                 failure(ex)
             }
         }
+    }
+
+    suspend fun getGrammarByCategory(category: String): ArrayList<GrammarEntry> {
+        val database = httpClient.get<String>("$databaseURL/grammar?category=$category")
+        val grammarEntry: ArrayList<GrammarEntry> = ArrayList()
+        (Json.nonstrict.parseJson(database) as JsonArray).forEach {
+            val entry = Json.nonstrict.parse(GrammarEntry.serializer(), it.toString())
+            grammarEntry.add(entry)
+        }
+        return grammarEntry
+    }
+
+    suspend fun getVocabularyByCategory(category: String): ArrayList<VocabularyEntry> {
+        val database = httpClient.get<String>("$databaseURL/vocabulary?category=$category")
+        val vocabularyEntry: ArrayList<VocabularyEntry> = ArrayList()
+        (Json.nonstrict.parseJson(database) as JsonArray).forEach {
+            val entry = Json.nonstrict.parse(VocabularyEntry.serializer(), it.toString())
+            vocabularyEntry.add(entry)
+        }
+        return vocabularyEntry
     }
 
     fun getVocabularyByCategory(category: String, success: (List<VocabularyEntry>) -> Unit, failure: (Throwable?) -> Unit) {

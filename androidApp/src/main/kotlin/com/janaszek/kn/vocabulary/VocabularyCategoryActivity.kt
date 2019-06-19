@@ -13,13 +13,13 @@ class VocabularyCategoryActivity : AppCompatActivity() {
         setContentView(R.layout.activity_vocabulary_category)
 
         vocabulary_beginner_btn.setOnClickListener {
-            val i = Intent(this, VocabularyRVActivity::class.java)
+            val i = Intent(this, VocabularyRVActivity2::class.java)
             i.putExtra("category", vocabulary_beginner_btn.text)
             startActivity(i)
         }
 
         vocabulary_intermediate_btn.setOnClickListener {
-            val i = Intent(this, VocabularyRVActivity::class.java)
+            val i = Intent(this, VocabularyRVActivity2::class.java)
             i.putExtra("category", vocabulary_intermediate_btn.text)
             startActivity(i)
         }

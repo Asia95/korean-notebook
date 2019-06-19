@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
 import com.janaszek.kn.R
+import com.janaszek.kn.ServiceLocator
 import kotlinx.android.synthetic.main.activity_vocabulary_rv.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -29,7 +30,7 @@ class VocabularyRVActivity : AppCompatActivity(), CoroutineScope {
 
         setupRecyclerView()
         job = Job()
-        api = DatabaseApi()
+        api = ServiceLocator.databaseApi
 
         val category = intent.getStringExtra("category")
         loadList(category)

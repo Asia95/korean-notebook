@@ -23,8 +23,8 @@ class VocabularyAdapter : RecyclerView.Adapter<VocabularyAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.word?.text = vocabularyList[position].title
-        holder.description = vocabularyList[position].description
-        holder.preview?.text = vocabularyList[position].description.take(50) + "..."
+        holder.explanation = vocabularyList[position].explanation
+        holder.preview?.text = vocabularyList[position].explanation.take(50) + "..."
     }
 
     fun updateData(list: List<VocabularyEntry>) {
@@ -36,7 +36,7 @@ class VocabularyAdapter : RecyclerView.Adapter<VocabularyAdapter.ViewHolder>() {
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view), View.OnClickListener {
         val word = view.vocabulary_item_word
         val preview = view.vocabulary_item_description
-        var description = ""
+        var explanation = ""
 
         init {
             view.setOnClickListener(this)
@@ -46,7 +46,7 @@ class VocabularyAdapter : RecyclerView.Adapter<VocabularyAdapter.ViewHolder>() {
             val context = v?.context
             val intent = Intent(context, VocabularyItemActivity::class.java)
             intent.putExtra("word", word.text)
-            intent.putExtra("description", description)
+            intent.putExtra("explanation", explanation)
             context?.startActivity(intent)
         }
     }

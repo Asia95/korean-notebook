@@ -13,17 +13,17 @@ import org.koreanNotebook.com.janaszek.kn.vocabulary.VocabularyEntry
 class VocabularyItemActivity : AppCompatActivity() {
 
     var word: String = ""
-    var description: String = ""
+    var explanation: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_vocabulary_item)
 
         word = intent.getStringExtra("word")
-        description = intent.getStringExtra("description")
+        explanation = intent.getStringExtra("explanation")
 
         vocabulary_word.text = word
-        vocabulary_description.text = description
+        vocabulary_description.text = explanation
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -33,7 +33,7 @@ class VocabularyItemActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean = when (item.itemId) {
         R.id.mybutton -> {
-            FlashcardWords.Companion.words.add(VocabularyEntry(description, word))
+            FlashcardWords.Companion.words.add(VocabularyEntry(explanation, word))
             Toast.makeText(applicationContext, "Added to flashcards", Toast.LENGTH_LONG).show()
             true
         }

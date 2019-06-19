@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bcm-vd-DXk">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Controller-->
+        <scene sceneID="uxB-TI-rNe">
+            <objects>
+                <viewController id="Bcm-vd-DXk" customClass="MainController" customModule="iosApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5BV-s7-2cr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3xB-gZ-99s">
+                                <rect key="frame" x="16" y="247" width="343" height="100"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="Flashcards"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KVL-ep-iUd">
+                                <rect key="frame" x="16" y="31" width="343" height="100"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <accessibility key="accessibilityConfiguration" identifier="grammar_btn" label="Grammar"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="dzC-Sn-V8i"/>
+                                </constraints>
+                                <state key="normal" title="Grammar"/>
+                                <connections>
+                                    <action selector="grammarBtnOnClick:" destination="Bcm-vd-DXk" eventType="touchUpInside" id="Nk2-q6-FNU"/>
+                                    <action selector="grammarBtnOnClick:" destination="blB-10-tse" eventType="touchUpInside" id="pOP-a4-GhJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fT-Mf-FT1">
+                                <rect key="frame" x="16" y="139" width="343" height="100"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="O9b-yY-ftZ"/>
+                                </constraints>
+                                <state key="normal" title="Vocabulary"/>
+                                <connections>
+                                    <action selector="vocabularyBtnOnClick:" destination="blB-10-tse" eventType="touchUpInside" id="iUt-8a-XPm"/>
+                                    <action selector="vocabularyBtnOnClick:" destination="Bcm-vd-DXk" eventType="touchUpInside" id="sdt-Rx-1TT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3xB-gZ-99s" firstAttribute="leading" secondItem="2fT-Mf-FT1" secondAttribute="leading" id="CAk-4f-nc3"/>
+                            <constraint firstItem="2fT-Mf-FT1" firstAttribute="trailing" secondItem="KVL-ep-iUd" secondAttribute="trailing" id="DbJ-rk-iMD"/>
+                            <constraint firstItem="h73-5L-ygP" firstAttribute="bottom" secondItem="3xB-gZ-99s" secondAttribute="bottom" constant="320" id="JsB-8Y-0Uq"/>
+                            <constraint firstItem="2fT-Mf-FT1" firstAttribute="top" secondItem="KVL-ep-iUd" secondAttribute="bottom" constant="8" symbolic="YES" id="RhW-Hq-QqI"/>
+                            <constraint firstItem="KVL-ep-iUd" firstAttribute="trailing" secondItem="5BV-s7-2cr" secondAttribute="trailingMargin" id="X8G-ic-zvX"/>
+                            <constraint firstItem="KVL-ep-iUd" firstAttribute="leading" secondItem="5BV-s7-2cr" secondAttribute="leadingMargin" id="mf6-39-5F1"/>
+                            <constraint firstItem="KVL-ep-iUd" firstAttribute="top" secondItem="h73-5L-ygP" secondAttribute="top" constant="11" id="w9c-YT-320"/>
+                            <constraint firstItem="3xB-gZ-99s" firstAttribute="trailing" secondItem="2fT-Mf-FT1" secondAttribute="trailing" id="wnT-ny-OGG"/>
+                            <constraint firstItem="2fT-Mf-FT1" firstAttribute="leading" secondItem="KVL-ep-iUd" secondAttribute="leading" id="xnR-jy-nEK"/>
+                            <constraint firstItem="3xB-gZ-99s" firstAttribute="top" secondItem="2fT-Mf-FT1" secondAttribute="bottom" constant="8" symbolic="YES" id="yDq-me-JsC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="h73-5L-ygP"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="68I-ZR-PuS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="blB-10-tse" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="61.600000000000001" y="88.605697151424295"/>
+        </scene>
+    </scenes>
+</document>
