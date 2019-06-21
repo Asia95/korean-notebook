@@ -12,7 +12,7 @@ import koreanNotebook
 class GrammarItemViewController: UIViewController {
 
     @IBOutlet weak var grammarTitle: UILabel!
-    @IBOutlet weak var grammarBody: UITextView!
+    @IBOutlet weak var grammarBody: UILabel!
     var grammarItem: GrammarEntry?
     
     override func viewDidLoad() {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bcm-vd-DXk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aVF-Kt-fiE">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -18,12 +18,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3xB-gZ-99s">
-                                <rect key="frame" x="16" y="247" width="343" height="100"/>
+                                <rect key="frame" x="16" y="291" width="343" height="56"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <state key="normal" title="Flashcards"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KVL-ep-iUd">
-                                <rect key="frame" x="16" y="31" width="343" height="100"/>
+                                <rect key="frame" x="16" y="75" width="343" height="100"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <accessibility key="accessibilityConfiguration" identifier="grammar_btn" label="Grammar"/>
                                 <constraints>
@@ -36,7 +36,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fT-Mf-FT1">
-                                <rect key="frame" x="16" y="139" width="343" height="100"/>
+                                <rect key="frame" x="16" y="183" width="343" height="100"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="O9b-yY-ftZ"/>
@@ -63,11 +63,30 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h73-5L-ygP"/>
                     </view>
+                    <navigationItem key="navigationItem" id="j80-1f-a8H"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="68I-ZR-PuS" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="blB-10-tse" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="61.600000000000001" y="88.605697151424295"/>
+            <point key="canvasLocation" x="132" y="83.208395802098963"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SV1-Fq-XVw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aVF-Kt-fiE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Yp1-Cg-NbE">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Bcm-vd-DXk" kind="relationship" relationship="rootViewController" id="TOl-qr-CMC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ON6-HF-UZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-807.20000000000005" y="83.208395802098963"/>
         </scene>
     </scenes>
 </document>

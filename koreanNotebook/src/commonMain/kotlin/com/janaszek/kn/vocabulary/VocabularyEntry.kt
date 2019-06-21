@@ -6,7 +6,7 @@ import kotlinx.serialization.Transient
 
 @Serializable
 data class VocabularyEntry (
-        @SerialName("explanation")
+        @SerialName("description")
         val explanation: String,
         val title: String
 ){

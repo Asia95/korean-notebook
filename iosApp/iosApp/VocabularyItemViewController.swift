@@ -12,7 +12,7 @@ import koreanNotebook
 class VocabularyItemViewController: UIViewController {
 
     @IBOutlet weak var vocabularyTitle: UILabel!
-    @IBOutlet weak var vocabularyDescription: UITextView!
+    @IBOutlet weak var vocabularyDescription: UILabel!
     var vocabularyItem: VocabularyEntry?
     
     override func viewDidLoad() {

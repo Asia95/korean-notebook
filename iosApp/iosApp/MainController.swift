@@ -11,16 +11,17 @@ import UIKit
 class MainController: UIViewController {
 
     @IBAction func grammarBtnOnClick(_ sender: UIButton) {
-        let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "test") as! GrammarCategoryViewController
-        secondViewController.category = sender.currentTitle
-        self.navigationController?.pushViewController(secondViewController, animated: true)
+        let storyboard = UIStoryboard(name: "GrammarCategory", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "GrammarCategory") as! GrammarCategoryViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func vocabularyBtnOnClick(_ sender: UIButton) {
-        let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "VocabularyCategory") as! VocabularyCategoryViewController
-        secondViewController.category = sender.currentTitle
-        self.navigationController?.pushViewController(secondViewController, animated: true)
+        let storyboard = UIStoryboard(name: "VocabularyCategory", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "VocabularyCategory") as! VocabularyCategoryViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

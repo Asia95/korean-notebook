@@ -13,9 +13,10 @@ class GrammarCategoryViewController: UIViewController {
     var category: String?
     
     @IBAction func onClick(_ sender: UIButton) {
-        let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "GrammarTableView") as! GrammarTableViewController
-        secondViewController.category = sender.currentTitle
-        self.navigationController?.pushViewController(secondViewController, animated: true)
+        let storyboard = UIStoryboard(name: "Grammar", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "GrammarTableView") as! GrammarTableViewController
+        vc.category = sender.accessibilityLabel
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     override func viewDidLoad() {

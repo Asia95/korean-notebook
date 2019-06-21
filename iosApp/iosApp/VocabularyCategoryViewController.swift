@@ -13,9 +13,10 @@ class VocabularyCategoryViewController: UIViewController {
     var category: String?
     
     @IBAction func onClick(_ sender: UIButton) {
-        let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "VocabularyTableView") as! VocabularyTableViewController
-        secondViewController.category = sender.accessibilityLabel
-        self.navigationController?.pushViewController(secondViewController, animated: true)
+        let storyboard = UIStoryboard(name: "Vocabulary", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "VocabularyTableView") as! VocabularyTableViewController
+        vc.category = sender.accessibilityLabel
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     override func viewDidLoad() {

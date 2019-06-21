@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="GrammarCell" textLabel="BgH-EX-6oT" detailTextLabel="89q-Aa-p8k" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="2DT-Dz-PbB">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="VocabularyCell" textLabel="BgH-EX-6oT" detailTextLabel="89q-Aa-p8k" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="2DT-Dz-PbB">
                                 <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2DT-Dz-PbB" id="Vs3-0J-xZQ">
@@ -67,43 +67,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="vocabularyTitle" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HoR-Er-zfm">
-                                <rect key="frame" x="14" y="86" width="343" height="58"/>
+                                <rect key="frame" x="16" y="86" width="341" height="32"/>
                                 <accessibility key="accessibilityConfiguration" identifier="vocabularyTitle"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="vocabularyBody" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SUr-gw-GJu">
-                                <rect key="frame" x="14" y="174" width="343" height="473"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <accessibility key="accessibilityConfiguration" identifier="vocabularyBody"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVR-wH-w3h">
+                                <rect key="frame" x="16" y="162" width="341" height="485"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="473" id="him-4S-fLv"/>
+                                    <constraint firstAttribute="height" constant="485" id="KDo-8C-tkq"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="HoR-Er-zfm" firstAttribute="trailing" secondItem="SUr-gw-GJu" secondAttribute="trailing" id="8Oq-LN-1v8"/>
-                            <constraint firstItem="SUr-gw-GJu" firstAttribute="leading" secondItem="acp-qL-twV" secondAttribute="leading" constant="14" id="Ww4-3G-W0Q"/>
-                            <constraint firstItem="SUr-gw-GJu" firstAttribute="top" secondItem="HoR-Er-zfm" secondAttribute="bottom" constant="30" id="XTC-bZ-Ne5"/>
-                            <constraint firstItem="acp-qL-twV" firstAttribute="trailing" secondItem="SUr-gw-GJu" secondAttribute="trailing" constant="18" id="b01-J3-8iV"/>
-                            <constraint firstItem="HoR-Er-zfm" firstAttribute="top" secondItem="acp-qL-twV" secondAttribute="top" constant="22" id="bM5-Kz-IK7"/>
-                            <constraint firstItem="HoR-Er-zfm" firstAttribute="leading" secondItem="SUr-gw-GJu" secondAttribute="leading" id="nzC-32-dE0"/>
-                            <constraint firstAttribute="bottom" secondItem="SUr-gw-GJu" secondAttribute="bottom" constant="20" symbolic="YES" id="qYN-uu-vz6"/>
+                            <constraint firstItem="HoR-Er-zfm" firstAttribute="leading" secondItem="nVR-wH-w3h" secondAttribute="leading" id="4C0-59-VMM"/>
+                            <constraint firstItem="acp-qL-twV" firstAttribute="trailing" secondItem="nVR-wH-w3h" secondAttribute="trailing" constant="18" id="8zv-W0-c9f"/>
+                            <constraint firstItem="nVR-wH-w3h" firstAttribute="leading" secondItem="3Ig-yY-QHe" secondAttribute="leadingMargin" id="BZt-Iz-Udl"/>
+                            <constraint firstAttribute="bottom" secondItem="nVR-wH-w3h" secondAttribute="bottom" constant="20" symbolic="YES" id="WFk-CL-fJs"/>
+                            <constraint firstItem="HoR-Er-zfm" firstAttribute="trailing" secondItem="nVR-wH-w3h" secondAttribute="trailing" id="WrA-v1-EUu"/>
+                            <constraint firstItem="HoR-Er-zfm" firstAttribute="top" secondItem="acp-qL-twV" secondAttribute="top" constant="22" id="syh-eB-UKN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="acp-qL-twV"/>
                     </view>
                     <connections>
-                        <outlet property="vocabularyDescription" destination="SUr-gw-GJu" id="0X8-5p-e1o"/>
+                        <outlet property="vocabularyDescription" destination="nVR-wH-w3h" id="5am-tW-SjI"/>
                         <outlet property="vocabularyTitle" destination="HoR-Er-zfm" id="G8S-Y9-cxd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8BH-HH-Zxm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3663" y="78"/>
+            <point key="canvasLocation" x="3661.5999999999999" y="77.811094452773617"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mmM-V0-VEv">
