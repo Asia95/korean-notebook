@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import koreanNotebook
 
-class MainController: UIViewController {
+class MainController: UIViewController, UISearchResultsUpdating {
 
     @IBAction func grammarBtnOnClick(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "GrammarCategory", bundle: nil)
@@ -22,13 +23,21 @@ class MainController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        let search = UISearchController(searchResultsController: nil)
+        search.searchResultsUpdater = self
+        search.obscuresBackgroundDuringPresentation = false
+        search.searchBar.placeholder = "Type something here to search"
+        navigationItem.searchController = search
     }
     
-
+    func updateSearchResults(for searchController: UISearchController) {
+        DatabaseApi().searchInGrammar(query: searchController.searchBar.text)
+        DatabaseApi().searchInVocabulary(query: searchController.searchBar.text)
+    }
     /*
     // MARK: - Navigation
 

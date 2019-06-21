@@ -4,10 +4,12 @@ package com.janaszek.kn
 
 import io.ktor.client.engine.HttpClientEngine
 import org.koreanNotebook.DatabaseApi
+import org.koreanNotebook.com.janaszek.kn.presentation.SearchPresenter
 import org.koreanNotebook.com.janaszek.kn.presentation.grammar.GrammarPresenter
 import org.koreanNotebook.com.janaszek.kn.presentation.grammar.VocabularyPresenter
 import org.koreanNotebook.com.janaszek.kn.usecase.GetGrammar
 import org.koreanNotebook.com.janaszek.kn.usecase.GetVocabulary
+import org.koreanNotebook.com.janaszek.kn.usecase.Search
 import kotlin.native.concurrent.ThreadLocal
 
 /**
@@ -29,6 +31,12 @@ object ServiceLocator {
 
     val vocabularyPresenter: VocabularyPresenter
         get() = VocabularyPresenter(getVocabulary)
+
+    val getSearchResults: Search
+        get() = Search(databaseApi)
+
+    val searchPresenter: SearchPresenter
+        get() = SearchPresenter(getSearchResults)
 }
 
 /**

@@ -71,8 +71,11 @@ class DatabaseApi(clientEngine: HttpClientEngine) {
         GlobalScope.launch(ApplicationDispatcher) {
             try {
                 val database = httpClient.get<String>("$databaseURL/vocabulary?search=$query")
-                var vocabulary = Json.nonstrict.parse(Grammar.serializer(), database)
                 val vocabularyEntry: ArrayList<VocabularyEntry> = ArrayList()
+                (Json.nonstrict.parseJson(database) as JsonArray).forEach {
+                    val entry = Json.nonstrict.parse(VocabularyEntry.serializer(), it.toString())
+                    vocabularyEntry.add(entry)
+                }
                 success(vocabularyEntry)
             } catch (ex: Exception) {
                 failure(ex)
@@ -83,13 +86,36 @@ class DatabaseApi(clientEngine: HttpClientEngine) {
     fun searchInGrammar(query: String, success: (List<GrammarEntry>) -> Unit, failure: (Throwable?) -> Unit) {
         GlobalScope.launch(ApplicationDispatcher) {
             try {
-                val database = httpClient.get<String>("$databaseURL/grammar?search=$query")
-                var grammar = Json.nonstrict.parse(Grammar.serializer(), database)
                 val grammarEntry: ArrayList<GrammarEntry> = ArrayList()
+                val database = httpClient.get<String>("$databaseURL/grammar?search=$query")
+                (Json.nonstrict.parseJson(database) as JsonArray).forEach {
+                    val entry = Json.nonstrict.parse(GrammarEntry.serializer(), it.toString())
+                    grammarEntry.add(entry)
+                }
                 success(grammarEntry)
             } catch (ex: Exception) {
                 failure(ex)
             }
         }
+    }
+
+    suspend fun searchInVocabulary(query: String): ArrayList<VocabularyEntry> {
+        val database = httpClient.get<String>("$databaseURL/vocabulary?search=$query")
+        val vocabularyEntry: ArrayList<VocabularyEntry> = ArrayList()
+        (Json.nonstrict.parseJson(database) as JsonArray).forEach {
+            val entry = Json.nonstrict.parse(VocabularyEntry.serializer(), it.toString())
+            vocabularyEntry.add(entry)
+        }
+        return vocabularyEntry
+    }
+
+    suspend fun searchInGrammar(query: String): ArrayList<GrammarEntry> {
+        val grammarEntry: ArrayList<GrammarEntry> = ArrayList()
+        val database = httpClient.get<String>("$databaseURL/grammar?search=$query")
+        (Json.nonstrict.parseJson(database) as JsonArray).forEach {
+            val entry = Json.nonstrict.parse(GrammarEntry.serializer(), it.toString())
+            grammarEntry.add(entry)
+        }
+        return grammarEntry
     }
 }

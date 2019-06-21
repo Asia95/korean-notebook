@@ -42,7 +42,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8J-1q-hnP">
-                                <rect key="frame" x="16" y="280" width="343" height="56"/>
+                                <rect key="frame" x="16" y="280" width="343" height="100"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <accessibility key="accessibilityConfiguration" label="advanced"/>
                                 <state key="normal" title="Advanced"/>
@@ -53,7 +53,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="hQJ-cu-ntU" firstAttribute="bottom" secondItem="c8J-1q-hnP" secondAttribute="bottom" constant="331" id="03A-5S-S0d"/>
+                            <constraint firstItem="hQJ-cu-ntU" firstAttribute="bottom" secondItem="c8J-1q-hnP" secondAttribute="bottom" constant="287" id="03A-5S-S0d"/>
                             <constraint firstItem="9If-5y-igK" firstAttribute="top" secondItem="y99-WH-zap" secondAttribute="bottom" constant="8" symbolic="YES" id="Fmq-a4-VXv"/>
                             <constraint firstItem="c8J-1q-hnP" firstAttribute="top" secondItem="9If-5y-igK" secondAttribute="bottom" constant="8" symbolic="YES" id="FzW-3d-3D5"/>
                             <constraint firstItem="c8J-1q-hnP" firstAttribute="leading" secondItem="9If-5y-igK" secondAttribute="leading" id="Inn-Tp-2hB"/>

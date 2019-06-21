@@ -26,7 +26,7 @@
 		02482DB622BA72E300BFD717 /* GrammarCategory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02482DB522BA72E300BFD717 /* GrammarCategory.storyboard */; };
 		02482DBA22BA733B00BFD717 /* GrammarCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02482DB922BA733B00BFD717 /* GrammarCategoryViewController.swift */; };
 		02482DBC22BA735300BFD717 /* VocabularyCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02482DBB22BA735300BFD717 /* VocabularyCategoryViewController.swift */; };
-		02482DC122BA83E500BFD717 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02482DC022BA83E500BFD717 /* Storyboard.storyboard */; };
+		02482DC322BD2DA700BFD717 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02482DC222BD2DA700BFD717 /* SearchResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,7 +86,7 @@
 		02482DB522BA72E300BFD717 /* GrammarCategory.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GrammarCategory.storyboard; sourceTree = "<group>"; };
 		02482DB922BA733B00BFD717 /* GrammarCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrammarCategoryViewController.swift; sourceTree = "<group>"; };
 		02482DBB22BA735300BFD717 /* VocabularyCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VocabularyCategoryViewController.swift; sourceTree = "<group>"; };
-		02482DC022BA83E500BFD717 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		02482DC222BD2DA700BFD717 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +147,7 @@
 				02482DB322BA70F800BFD717 /* VocabularyCategory.storyboard */,
 				023406C422B6823500F7A0F0 /* AppDelegate.swift */,
 				02482DAF22BA6DE000BFD717 /* MainController.swift */,
+				02482DC222BD2DA700BFD717 /* SearchResultsViewController.swift */,
 				023406CB22B6823900F7A0F0 /* Assets.xcassets */,
 				02482DB922BA733B00BFD717 /* GrammarCategoryViewController.swift */,
 				02482DA022BA0F7600BFD717 /* GrammarTableViewController.swift */,
@@ -156,7 +157,6 @@
 				02482DBB22BA735300BFD717 /* VocabularyCategoryViewController.swift */,
 				02482DAB22BA43F100BFD717 /* VocabularyItemViewController.swift */,
 				02482DA922BA43D900BFD717 /* VocabularyTableViewController.swift */,
-				02482DC022BA83E500BFD717 /* Storyboard.storyboard */,
 			);
 			path = iosApp;
 			sourceTree = "<group>";
@@ -290,7 +290,6 @@
 				02482DAE22BA69F700BFD717 /* Main.storyboard in Resources */,
 				02482DB622BA72E300BFD717 /* GrammarCategory.storyboard in Resources */,
 				023406CF22B6823900F7A0F0 /* LaunchScreen.storyboard in Resources */,
-				02482DC122BA83E500BFD717 /* Storyboard.storyboard in Resources */,
 				023406CC22B6823900F7A0F0 /* Assets.xcassets in Resources */,
 				023406CA22B6823500F7A0F0 /* Grammar.storyboard in Resources */,
 			);
@@ -344,6 +343,7 @@
 				02482DA122BA0F7600BFD717 /* GrammarTableViewController.swift in Sources */,
 				02482DBC22BA735300BFD717 /* VocabularyCategoryViewController.swift in Sources */,
 				02482DB022BA6DE000BFD717 /* MainController.swift in Sources */,
+				02482DC322BD2DA700BFD717 /* SearchResultsViewController.swift in Sources */,
 				02482DAA22BA43D900BFD717 /* VocabularyTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
