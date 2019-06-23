@@ -13,6 +13,12 @@ class MainController: UIViewController, UISearchBarDelegate {
 
     let searchController = UISearchController(searchResultsController: nil)
 
+    @IBAction func flashcardsBtnOnClick(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Flashcards", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "Flashcards") as! FlashcardsViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     @IBAction func grammarBtnOnClick(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "GrammarCategory", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "GrammarCategory") as! GrammarCategoryViewController

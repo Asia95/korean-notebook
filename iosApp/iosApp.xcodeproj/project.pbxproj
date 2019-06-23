@@ -30,6 +30,9 @@
 		02482DC722BF4B6400BFD717 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02482DC622BF4B6400BFD717 /* Search.storyboard */; };
 		02482DCB22BF6ADA00BFD717 /* card_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 02482DCA22BF6AD900BFD717 /* card_icon.png */; };
 		02482DCD22BF706C00BFD717 /* Vocabulary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02482DCC22BF706C00BFD717 /* Vocabulary.storyboard */; };
+		02482DCF22BF755B00BFD717 /* Flashcards.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02482DCE22BF755B00BFD717 /* Flashcards.storyboard */; };
+		02482DD122BF75A500BFD717 /* FlashcardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02482DD022BF75A500BFD717 /* FlashcardsViewController.swift */; };
+		02482DD322BF762D00BFD717 /* WDFlashCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02482DD222BF762C00BFD717 /* WDFlashCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +96,9 @@
 		02482DC622BF4B6400BFD717 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		02482DCA22BF6AD900BFD717 /* card_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_icon.png; sourceTree = "<group>"; };
 		02482DCC22BF706C00BFD717 /* Vocabulary.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Vocabulary.storyboard; sourceTree = "<group>"; };
+		02482DCE22BF755B00BFD717 /* Flashcards.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Flashcards.storyboard; sourceTree = "<group>"; };
+		02482DD022BF75A500BFD717 /* FlashcardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardsViewController.swift; sourceTree = "<group>"; };
+		02482DD222BF762C00BFD717 /* WDFlashCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WDFlashCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +152,7 @@
 		023406C322B6823500F7A0F0 /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
+				02482DD222BF762C00BFD717 /* WDFlashCardView.swift */,
 				02482DCC22BF706C00BFD717 /* Vocabulary.storyboard */,
 				02482DCA22BF6AD900BFD717 /* card_icon.png */,
 				023406D022B6823900F7A0F0 /* Info.plist */,
@@ -166,6 +173,8 @@
 				02482DA922BA43D900BFD717 /* VocabularyTableViewController.swift */,
 				02482DC422BF433500BFD717 /* SearchResultsTableViewController.swift */,
 				02482DC622BF4B6400BFD717 /* Search.storyboard */,
+				02482DCE22BF755B00BFD717 /* Flashcards.storyboard */,
+				02482DD022BF75A500BFD717 /* FlashcardsViewController.swift */,
 			);
 			path = iosApp;
 			sourceTree = "<group>";
@@ -303,6 +312,7 @@
 				023406CC22B6823900F7A0F0 /* Assets.xcassets in Resources */,
 				02482DC722BF4B6400BFD717 /* Search.storyboard in Resources */,
 				023406CA22B6823500F7A0F0 /* Grammar.storyboard in Resources */,
+				02482DCF22BF755B00BFD717 /* Flashcards.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +359,7 @@
 			files = (
 				02482DBA22BA733B00BFD717 /* GrammarCategoryViewController.swift in Sources */,
 				023406C522B6823500F7A0F0 /* AppDelegate.swift in Sources */,
+				02482DD322BF762D00BFD717 /* WDFlashCardView.swift in Sources */,
 				02482DC522BF433500BFD717 /* SearchResultsTableViewController.swift in Sources */,
 				02482DAC22BA43F100BFD717 /* VocabularyItemViewController.swift in Sources */,
 				02482DA322BA248A00BFD717 /* GrammarItemViewController.swift in Sources */,
@@ -357,6 +368,7 @@
 				02482DB022BA6DE000BFD717 /* MainController.swift in Sources */,
 				02482DC322BD2DA700BFD717 /* SearchResultsViewController.swift in Sources */,
 				02482DAA22BA43D900BFD717 /* VocabularyTableViewController.swift in Sources */,
+				02482DD122BF75A500BFD717 /* FlashcardsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

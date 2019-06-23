@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Flash Card Delegate-->
+        <scene sceneID="Mmv-5F-bIa">
+            <objects>
+                <viewController storyboardIdentifier="Flashcards" id="ITO-Md-VWd" customClass="FlashcardsViewController" customModule="iosApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MM0-uf-ycG"/>
+                        <viewControllerLayoutGuide type="bottom" id="i7f-M0-l2b"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0BS-4A-fGK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xq4-Mp-WAI" customClass="WDFlashCard" customModule="iosApp">
+                                <rect key="frame" x="37.5" y="183.5" width="300" height="300"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IkK-51-mqc">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="explenation" text="Answer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYY-pD-QTc">
+                                                <rect key="frame" x="109.5" y="135" width="81.5" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="textColor" red="0.070588235289999995" green="0.13725490200000001" blue="0.23921568630000001" alpha="1" colorSpace="deviceRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                </variation>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="SYY-pD-QTc" firstAttribute="centerY" secondItem="IkK-51-mqc" secondAttribute="centerY" id="cbv-aJ-Sge"/>
+                                            <constraint firstItem="SYY-pD-QTc" firstAttribute="centerX" secondItem="IkK-51-mqc" secondAttribute="centerX" id="rGm-rK-hk7"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jhw-f6-z94">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="word" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJz-wY-DiT">
+                                                <rect key="frame" x="101" y="135" width="98" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="textColor" red="0.070588235289999995" green="0.13725490200000001" blue="0.23921568630000001" alpha="1" colorSpace="deviceRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                </variation>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="wJz-wY-DiT" firstAttribute="centerX" secondItem="Jhw-f6-z94" secondAttribute="centerX" id="cJf-1X-h92"/>
+                                            <constraint firstItem="wJz-wY-DiT" firstAttribute="centerY" secondItem="Jhw-f6-z94" secondAttribute="centerY" id="wE5-6Y-F9h"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Xq4-Mp-WAI" secondAttribute="height" id="0qr-6h-aKY"/>
+                                    <constraint firstItem="IkK-51-mqc" firstAttribute="centerX" secondItem="Xq4-Mp-WAI" secondAttribute="centerX" id="NNx-L9-cRl"/>
+                                    <constraint firstItem="IkK-51-mqc" firstAttribute="width" secondItem="Xq4-Mp-WAI" secondAttribute="width" id="Nmg-GN-gSs"/>
+                                    <constraint firstItem="Jhw-f6-z94" firstAttribute="height" secondItem="Xq4-Mp-WAI" secondAttribute="height" id="SYN-hs-dr9"/>
+                                    <constraint firstItem="IkK-51-mqc" firstAttribute="height" secondItem="Xq4-Mp-WAI" secondAttribute="height" id="ZzP-n2-bX6"/>
+                                    <constraint firstItem="Jhw-f6-z94" firstAttribute="width" secondItem="Xq4-Mp-WAI" secondAttribute="width" id="gdd-Im-INf"/>
+                                    <constraint firstItem="Jhw-f6-z94" firstAttribute="centerY" secondItem="Xq4-Mp-WAI" secondAttribute="centerY" id="lZ0-x3-Xi6"/>
+                                    <constraint firstItem="Jhw-f6-z94" firstAttribute="centerX" secondItem="Xq4-Mp-WAI" secondAttribute="centerX" id="s2b-5Z-7jQ"/>
+                                    <constraint firstItem="IkK-51-mqc" firstAttribute="centerY" secondItem="Xq4-Mp-WAI" secondAttribute="centerY" id="upB-4o-OpR"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="flashCardDelegate" destination="ITO-Md-VWd" id="kwb-mr-kjI"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7t-ao-Izg">
+                                <rect key="frame" x="10" y="617" width="167.5" height="30"/>
+                                <state key="normal" title="Flip">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="flipBtnOnClick:" destination="ITO-Md-VWd" eventType="touchUpInside" id="aws-p2-xhN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIx-ne-Rmg">
+                                <rect key="frame" x="197.5" y="617" width="167.5" height="30"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextFlashcardOnClick:" destination="ITO-Md-VWd" eventType="touchUpInside" id="7yP-ah-six"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LIx-ne-Rmg" firstAttribute="leading" secondItem="z7t-ao-Izg" secondAttribute="trailing" constant="20" id="Clv-DR-1bz"/>
+                            <constraint firstItem="Xq4-Mp-WAI" firstAttribute="centerY" secondItem="0BS-4A-fGK" secondAttribute="centerY" id="ICx-i4-mdi"/>
+                            <constraint firstItem="i7f-M0-l2b" firstAttribute="top" secondItem="z7t-ao-Izg" secondAttribute="bottom" constant="20" id="RjS-th-slN"/>
+                            <constraint firstItem="z7t-ao-Izg" firstAttribute="width" secondItem="0BS-4A-fGK" secondAttribute="width" multiplier="0.5" constant="-20" id="Xtt-Rv-ltS"/>
+                            <constraint firstItem="Xq4-Mp-WAI" firstAttribute="width" secondItem="0BS-4A-fGK" secondAttribute="width" multiplier="0.8" id="bDo-0M-Z3z"/>
+                            <constraint firstItem="LIx-ne-Rmg" firstAttribute="width" secondItem="z7t-ao-Izg" secondAttribute="width" id="gMi-ec-ogp"/>
+                            <constraint firstItem="LIx-ne-Rmg" firstAttribute="centerY" secondItem="z7t-ao-Izg" secondAttribute="centerY" id="lmI-Jj-fWS"/>
+                            <constraint firstItem="z7t-ao-Izg" firstAttribute="leading" secondItem="0BS-4A-fGK" secondAttribute="leading" constant="10" id="tNg-Fv-sQz"/>
+                            <constraint firstItem="Xq4-Mp-WAI" firstAttribute="centerX" secondItem="0BS-4A-fGK" secondAttribute="centerX" id="tzG-U4-6XI"/>
+                            <constraint firstItem="LIx-ne-Rmg" firstAttribute="height" secondItem="z7t-ao-Izg" secondAttribute="height" id="xGH-ft-qji"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="daN-cE-G1p"/>
+                    </view>
+                    <connections>
+                        <outlet property="backView" destination="IkK-51-mqc" id="evi-Ie-4Rv"/>
+                        <outlet property="explenation" destination="SYY-pD-QTc" id="WCr-H1-AY9"/>
+                        <outlet property="flashCard" destination="Xq4-Mp-WAI" id="N7S-Ps-9U0"/>
+                        <outlet property="frontView" destination="Jhw-f6-z94" id="LX7-yZ-vt1"/>
+                        <outlet property="word" destination="wJz-wY-DiT" id="YUi-V7-u6R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cZB-jG-WHM" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-20" y="43"/>
+        </scene>
+    </scenes>
+</document>

@@ -12,8 +12,8 @@ import koreanNotebook
 class VocabularyItemViewController: UIViewController {
 
     @IBOutlet weak var vocabularyTitle: UILabel!
-    var flashcardsBtn: UIBarButtonItem!
     @IBOutlet weak var vocabularyDescription: UILabel!
+    var flashcardsBtn: UIBarButtonItem!
     var vocabularyItem: VocabularyEntry?
     
     override func viewDidLoad() {
@@ -28,6 +28,7 @@ class VocabularyItemViewController: UIViewController {
     }
     
     @objc func onFlashcardAdd(sender: UIBarButtonItem) {
+        FlashcardsVocabulary.vocabulary.append(vocabularyItem!)
         showToast(controller: self, message : "Added to flashcards", seconds: 2.0)
     }
     

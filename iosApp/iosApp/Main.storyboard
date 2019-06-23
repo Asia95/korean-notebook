@@ -49,6 +49,9 @@
                                     <constraint firstAttribute="height" constant="100" id="K2X-az-uXj"/>
                                 </constraints>
                                 <state key="normal" title="Flashcards"/>
+                                <connections>
+                                    <action selector="flashcardsBtnOnClick:" destination="Bcm-vd-DXk" eventType="touchUpInside" id="Ggv-vz-qew"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
