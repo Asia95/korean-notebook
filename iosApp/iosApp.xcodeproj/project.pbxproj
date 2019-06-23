@@ -17,7 +17,6 @@
 		02482D9E22B94F6B00BFD717 /* koreanNotebook.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 02482D9C22B94F6B00BFD717 /* koreanNotebook.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		02482DA122BA0F7600BFD717 /* GrammarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02482DA022BA0F7600BFD717 /* GrammarTableViewController.swift */; };
 		02482DA322BA248A00BFD717 /* GrammarItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02482DA222BA248A00BFD717 /* GrammarItemViewController.swift */; };
-		02482DA822BA43BF00BFD717 /* Vocabulary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02482DA722BA43BF00BFD717 /* Vocabulary.storyboard */; };
 		02482DAA22BA43D900BFD717 /* VocabularyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02482DA922BA43D900BFD717 /* VocabularyTableViewController.swift */; };
 		02482DAC22BA43F100BFD717 /* VocabularyItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02482DAB22BA43F100BFD717 /* VocabularyItemViewController.swift */; };
 		02482DAE22BA69F700BFD717 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02482DAD22BA69F700BFD717 /* Main.storyboard */; };
@@ -29,6 +28,8 @@
 		02482DC322BD2DA700BFD717 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02482DC222BD2DA700BFD717 /* SearchResultsViewController.swift */; };
 		02482DC522BF433500BFD717 /* SearchResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02482DC422BF433500BFD717 /* SearchResultsTableViewController.swift */; };
 		02482DC722BF4B6400BFD717 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02482DC622BF4B6400BFD717 /* Search.storyboard */; };
+		02482DCB22BF6ADA00BFD717 /* card_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 02482DCA22BF6AD900BFD717 /* card_icon.png */; };
+		02482DCD22BF706C00BFD717 /* Vocabulary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02482DCC22BF706C00BFD717 /* Vocabulary.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,7 +80,6 @@
 		02482D9C22B94F6B00BFD717 /* koreanNotebook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = koreanNotebook.framework; path = ../koreanNotebook/build/bin/ios/releaseFramework/koreanNotebook.framework; sourceTree = "<group>"; };
 		02482DA022BA0F7600BFD717 /* GrammarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrammarTableViewController.swift; sourceTree = "<group>"; };
 		02482DA222BA248A00BFD717 /* GrammarItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrammarItemViewController.swift; sourceTree = "<group>"; };
-		02482DA722BA43BF00BFD717 /* Vocabulary.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Vocabulary.storyboard; sourceTree = "<group>"; };
 		02482DA922BA43D900BFD717 /* VocabularyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VocabularyTableViewController.swift; path = iosApp/VocabularyTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		02482DAB22BA43F100BFD717 /* VocabularyItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VocabularyItemViewController.swift; path = iosApp/VocabularyItemViewController.swift; sourceTree = SOURCE_ROOT; };
 		02482DAD22BA69F700BFD717 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -91,6 +91,8 @@
 		02482DC222BD2DA700BFD717 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		02482DC422BF433500BFD717 /* SearchResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsTableViewController.swift; sourceTree = "<group>"; };
 		02482DC622BF4B6400BFD717 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		02482DCA22BF6AD900BFD717 /* card_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_icon.png; sourceTree = "<group>"; };
+		02482DCC22BF706C00BFD717 /* Vocabulary.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Vocabulary.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,10 +146,11 @@
 		023406C322B6823500F7A0F0 /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
+				02482DCC22BF706C00BFD717 /* Vocabulary.storyboard */,
+				02482DCA22BF6AD900BFD717 /* card_icon.png */,
 				023406D022B6823900F7A0F0 /* Info.plist */,
 				02482DB522BA72E300BFD717 /* GrammarCategory.storyboard */,
 				02482DAD22BA69F700BFD717 /* Main.storyboard */,
-				02482DA722BA43BF00BFD717 /* Vocabulary.storyboard */,
 				02482DB322BA70F800BFD717 /* VocabularyCategory.storyboard */,
 				023406C422B6823500F7A0F0 /* AppDelegate.swift */,
 				02482DAF22BA6DE000BFD717 /* MainController.swift */,
@@ -292,8 +295,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				02482DB422BA70F800BFD717 /* VocabularyCategory.storyboard in Resources */,
-				02482DA822BA43BF00BFD717 /* Vocabulary.storyboard in Resources */,
+				02482DCD22BF706C00BFD717 /* Vocabulary.storyboard in Resources */,
 				02482DAE22BA69F700BFD717 /* Main.storyboard in Resources */,
+				02482DCB22BF6ADA00BFD717 /* card_icon.png in Resources */,
 				02482DB622BA72E300BFD717 /* GrammarCategory.storyboard in Resources */,
 				023406CF22B6823900F7A0F0 /* LaunchScreen.storyboard in Resources */,
 				023406CC22B6823900F7A0F0 /* Assets.xcassets in Resources */,
