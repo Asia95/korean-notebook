@@ -9,10 +9,10 @@ abstract class BasePresenter<T>(private val coroutineContext: CoroutineContext) 
     protected var view: T? = null
     protected lateinit var scope: PresenterCoroutineScope
 
-    fun attachView(view: T, category: String) {
+    fun attachView(view: T, param: String) {
         this.view = view
         scope = PresenterCoroutineScope(coroutineContext)
-        onViewAttached(view, category)
+        onViewAttached(view, param)
     }
 
     protected open fun onViewAttached(view: T, category: String) {}

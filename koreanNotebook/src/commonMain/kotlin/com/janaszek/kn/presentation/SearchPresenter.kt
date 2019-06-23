@@ -11,15 +11,15 @@ class SearchPresenter(
         coroutineContext: CoroutineContext = defaultDispatcher
 ) : BasePresenter<SearchView>(coroutineContext) {
 
-    override fun onViewAttached(view: SearchView, category: String) {
+    override fun onViewAttached(view: SearchView, query: String) {
         view.setLoadingVisible(true)
-        getSearchResults(category)
+        getSearchResults(query)
     }
 
-    private fun getSearchResults(category: String) {
+    private fun getSearchResults(query: String) {
         scope.launch {
             getDatabase(
-                category,
+                query,
                 onSuccess = { view?.setSearchResult(it) },
                 onFailure = { view?.showSearchResultFailedToLoad() }
             )

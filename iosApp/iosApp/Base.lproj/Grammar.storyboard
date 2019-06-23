@@ -66,12 +66,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="grammarBody" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fic-iW-e35">
-                                <rect key="frame" x="16" y="157" width="341" height="490"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="grammarBody" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fic-iW-e35">
+                                <rect key="frame" x="16" y="126" width="341" height="521"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="490" id="dk6-LG-ynv"/>
+                                    <constraint firstAttribute="height" constant="521" id="BgN-W9-MdU"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -85,12 +85,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="fic-iW-e35" firstAttribute="trailing" secondItem="HoR-Er-zfm" secondAttribute="trailing" id="2aO-KP-1Lf"/>
-                            <constraint firstItem="acp-qL-twV" firstAttribute="trailing" secondItem="fic-iW-e35" secondAttribute="trailing" constant="18" id="BN3-TE-4hm"/>
+                            <constraint firstItem="fic-iW-e35" firstAttribute="leading" secondItem="HoR-Er-zfm" secondAttribute="leading" id="9Gd-Ii-W3K"/>
                             <constraint firstItem="HoR-Er-zfm" firstAttribute="top" secondItem="acp-qL-twV" secondAttribute="top" constant="22" id="BXa-I3-2Fq"/>
-                            <constraint firstItem="fic-iW-e35" firstAttribute="leading" secondItem="HoR-Er-zfm" secondAttribute="leading" id="gdK-7y-Iy5"/>
-                            <constraint firstItem="fic-iW-e35" firstAttribute="leading" secondItem="3Ig-yY-QHe" secondAttribute="leadingMargin" id="rdI-3G-7KS"/>
-                            <constraint firstAttribute="bottom" secondItem="fic-iW-e35" secondAttribute="bottom" constant="20" symbolic="YES" id="s0R-kg-XOw"/>
+                            <constraint firstItem="fic-iW-e35" firstAttribute="leading" secondItem="3Ig-yY-QHe" secondAttribute="leadingMargin" id="UNV-1A-QF6"/>
+                            <constraint firstItem="fic-iW-e35" firstAttribute="top" secondItem="HoR-Er-zfm" secondAttribute="bottom" constant="8" symbolic="YES" id="Z8Z-DO-9Px"/>
+                            <constraint firstItem="acp-qL-twV" firstAttribute="trailing" secondItem="fic-iW-e35" secondAttribute="trailing" constant="18" id="bEg-A6-mZC"/>
+                            <constraint firstItem="fic-iW-e35" firstAttribute="trailing" secondItem="HoR-Er-zfm" secondAttribute="trailing" id="jzp-pH-0DK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="acp-qL-twV"/>
                     </view>

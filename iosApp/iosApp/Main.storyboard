@@ -17,13 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3xB-gZ-99s">
-                                <rect key="frame" x="16" y="339" width="343" height="100"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <state key="normal" title="Flashcards"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fT-Mf-FT1">
-                                <rect key="frame" x="16" y="231" width="343" height="100"/>
+                                <rect key="frame" x="16" y="183" width="343" height="100"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="uOp-rW-fLs"/>
@@ -34,16 +29,12 @@
                                     <action selector="vocabularyBtnOnClick:" destination="Bcm-vd-DXk" eventType="touchUpInside" id="sdt-Rx-1TT"/>
                                 </connections>
                             </button>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="aTX-za-KP8">
-                                <rect key="frame" x="16" y="64" width="343" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KVL-ep-iUd">
-                                <rect key="frame" x="16" y="123" width="343" height="100"/>
+                                <rect key="frame" x="16" y="75" width="343" height="100"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <accessibility key="accessibilityConfiguration" identifier="grammar_btn" label="Grammar"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="dzC-Sn-V8i"/>
+                                    <constraint firstAttribute="height" constant="100" id="9aV-r5-GVy"/>
                                 </constraints>
                                 <state key="normal" title="Grammar"/>
                                 <connections>
@@ -51,22 +42,27 @@
                                     <action selector="grammarBtnOnClick:" destination="blB-10-tse" eventType="touchUpInside" id="pOP-a4-GhJ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3xB-gZ-99s">
+                                <rect key="frame" x="16" y="291" width="343" height="100"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="K2X-az-uXj"/>
+                                </constraints>
+                                <state key="normal" title="Flashcards"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="aTX-za-KP8" firstAttribute="leading" secondItem="KVL-ep-iUd" secondAttribute="leading" id="DAA-Tx-iqz"/>
-                            <constraint firstItem="h73-5L-ygP" firstAttribute="bottom" secondItem="3xB-gZ-99s" secondAttribute="bottom" constant="228" id="JsB-8Y-0Uq"/>
-                            <constraint firstItem="2fT-Mf-FT1" firstAttribute="leading" secondItem="KVL-ep-iUd" secondAttribute="leading" id="SCE-ZF-bfe"/>
-                            <constraint firstItem="3xB-gZ-99s" firstAttribute="top" secondItem="2fT-Mf-FT1" secondAttribute="bottom" constant="8" symbolic="YES" id="TFt-dr-hBb"/>
-                            <constraint firstItem="KVL-ep-iUd" firstAttribute="trailing" secondItem="5BV-s7-2cr" secondAttribute="trailingMargin" id="X8G-ic-zvX"/>
-                            <constraint firstItem="2fT-Mf-FT1" firstAttribute="leading" secondItem="3xB-gZ-99s" secondAttribute="leading" id="YOB-PT-KMV"/>
-                            <constraint firstItem="2fT-Mf-FT1" firstAttribute="top" secondItem="KVL-ep-iUd" secondAttribute="bottom" constant="8" symbolic="YES" id="dzg-zp-m72"/>
-                            <constraint firstItem="2fT-Mf-FT1" firstAttribute="trailing" secondItem="3xB-gZ-99s" secondAttribute="trailing" id="hEP-F1-g9f"/>
-                            <constraint firstItem="aTX-za-KP8" firstAttribute="trailing" secondItem="KVL-ep-iUd" secondAttribute="trailing" id="iwu-O5-VbM"/>
-                            <constraint firstItem="KVL-ep-iUd" firstAttribute="leading" secondItem="5BV-s7-2cr" secondAttribute="leadingMargin" id="mf6-39-5F1"/>
-                            <constraint firstItem="2fT-Mf-FT1" firstAttribute="trailing" secondItem="KVL-ep-iUd" secondAttribute="trailing" id="ok6-Cn-KRr"/>
-                            <constraint firstItem="aTX-za-KP8" firstAttribute="top" secondItem="h73-5L-ygP" secondAttribute="top" id="u2L-Ae-6Za"/>
-                            <constraint firstItem="KVL-ep-iUd" firstAttribute="top" secondItem="h73-5L-ygP" secondAttribute="top" constant="59" id="w9c-YT-320"/>
+                            <constraint firstItem="KVL-ep-iUd" firstAttribute="trailing" secondItem="2fT-Mf-FT1" secondAttribute="trailing" id="1Kx-wj-MnG"/>
+                            <constraint firstItem="KVL-ep-iUd" firstAttribute="leading" secondItem="5BV-s7-2cr" secondAttribute="leadingMargin" id="1nk-s7-cNa"/>
+                            <constraint firstItem="3xB-gZ-99s" firstAttribute="trailing" secondItem="2fT-Mf-FT1" secondAttribute="trailing" id="2gO-Qh-3yN"/>
+                            <constraint firstItem="KVL-ep-iUd" firstAttribute="trailing" secondItem="5BV-s7-2cr" secondAttribute="trailingMargin" id="Fff-N9-N30"/>
+                            <constraint firstItem="KVL-ep-iUd" firstAttribute="top" secondItem="h73-5L-ygP" secondAttribute="top" constant="11" id="Kj4-wh-2ar"/>
+                            <constraint firstItem="h73-5L-ygP" firstAttribute="bottom" secondItem="3xB-gZ-99s" secondAttribute="bottom" constant="276" id="dPM-5A-zh1"/>
+                            <constraint firstItem="3xB-gZ-99s" firstAttribute="top" secondItem="2fT-Mf-FT1" secondAttribute="bottom" constant="8" symbolic="YES" id="eVR-bb-D1V"/>
+                            <constraint firstItem="2fT-Mf-FT1" firstAttribute="top" secondItem="KVL-ep-iUd" secondAttribute="bottom" constant="8" symbolic="YES" id="irX-Ce-lXf"/>
+                            <constraint firstItem="3xB-gZ-99s" firstAttribute="leading" secondItem="2fT-Mf-FT1" secondAttribute="leading" id="n5k-97-yDw"/>
+                            <constraint firstItem="KVL-ep-iUd" firstAttribute="leading" secondItem="2fT-Mf-FT1" secondAttribute="leading" id="qCX-cQ-KlN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h73-5L-ygP"/>
                     </view>

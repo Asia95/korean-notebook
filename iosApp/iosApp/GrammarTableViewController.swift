@@ -23,7 +23,7 @@ class GrammarTableViewController: UITableViewController, GrammarView {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        presenter.attachView(view: self, category: category ?? "")
+        presenter.attachView(view: self, param: category ?? "")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
