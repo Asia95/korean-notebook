@@ -124,8 +124,8 @@ task copyFramework {
         copy {
             from srcFile.parent
             into targetDir
-            include 'GifLibrary.framework/**'
-            include 'GifLibrary.framework.dSYM'
+            include 'koreanNotebook.framework/**'
+            include 'koreanNotebook.framework.dSYM'
         }
     }
 }

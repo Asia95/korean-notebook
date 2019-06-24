@@ -14,7 +14,7 @@ struct FlashcardsVocabulary {
 }
 
 class FlashcardsViewController: UIViewController, WDFlashCardDelegate {
-
+    
     var vocabulary = FlashcardsVocabulary.vocabulary
     var flashcardIndex = 0
     @IBOutlet weak var backView: UIView!
