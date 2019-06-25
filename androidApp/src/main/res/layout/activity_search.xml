@@ -19,10 +19,11 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimaryDark"
+            android:background="@color/darkWhite"
             android:gravity="center"
             android:text="@string/grammar"
-            android:visibility="visible" />
+            android:visibility="visible"
+            android:padding="5px"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/search_grammar_rv"
@@ -34,9 +35,10 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimaryDark"
+            android:background="@color/darkWhite"
             android:gravity="center"
-            android:text="@string/vocabulary" />
+            android:text="@string/vocabulary"
+            android:padding="5px"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/search_vocabulary_rv"

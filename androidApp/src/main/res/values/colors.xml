@@ -6,4 +6,5 @@
     <color name="white">#FFFFFF</color>
     <color name="cardFront">#F4F444</color>
     <color name="cardBack">#F55555</color>
+    <color name="darkWhite">#e5e5ea</color>
 </resources>
