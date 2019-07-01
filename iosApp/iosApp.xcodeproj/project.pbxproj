@@ -33,6 +33,7 @@
 		02482DCF22BF755B00BFD717 /* Flashcards.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02482DCE22BF755B00BFD717 /* Flashcards.storyboard */; };
 		02482DD122BF75A500BFD717 /* FlashcardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02482DD022BF75A500BFD717 /* FlashcardsViewController.swift */; };
 		02482DD322BF762D00BFD717 /* WDFlashCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02482DD222BF762C00BFD717 /* WDFlashCardView.swift */; };
+		02F87F8E22CA3F3700C7331A /* notebook.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02F87F8D22CA3F3700C7331A /* notebook.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		02482DCE22BF755B00BFD717 /* Flashcards.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Flashcards.storyboard; sourceTree = "<group>"; };
 		02482DD022BF75A500BFD717 /* FlashcardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardsViewController.swift; sourceTree = "<group>"; };
 		02482DD222BF762C00BFD717 /* WDFlashCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WDFlashCardView.swift; sourceTree = "<group>"; };
+		02F87F8D22CA3F3700C7331A /* notebook.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = notebook.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 		023406C322B6823500F7A0F0 /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
+				02F87F8D22CA3F3700C7331A /* notebook.jpg */,
 				02482DD222BF762C00BFD717 /* WDFlashCardView.swift */,
 				02482DCC22BF706C00BFD717 /* Vocabulary.storyboard */,
 				02482DCA22BF6AD900BFD717 /* card_icon.png */,
@@ -309,6 +312,7 @@
 				02482DCB22BF6ADA00BFD717 /* card_icon.png in Resources */,
 				02482DB622BA72E300BFD717 /* GrammarCategory.storyboard in Resources */,
 				023406CF22B6823900F7A0F0 /* LaunchScreen.storyboard in Resources */,
+				02F87F8E22CA3F3700C7331A /* notebook.jpg in Resources */,
 				023406CC22B6823900F7A0F0 /* Assets.xcassets in Resources */,
 				02482DC722BF4B6400BFD717 /* Search.storyboard in Resources */,
 				023406CA22B6823500F7A0F0 /* Grammar.storyboard in Resources */,
